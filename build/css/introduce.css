@@ -1,30 +1,30 @@
-#section_1 {
+#section_1,
+#section_2,
+#section_3 {
     width: 100%;
-    height: 100%;
+    min-height: var(--section-h);
     background-color: #1B8BB8;
     position: static;
 }
 
-#section_2 {
-    width: 100%;
-    height: 100%;
-    background-color: #1B8BB8;
-}
-
-#section_3 {
-    width: 100%;
-    height: 100%;
-    background-color: #1B8BB8;
-}
-
 #section_N_main {
     width: 80%;
-    height: 590px;
+    max-width: 1200px;
+    min-height: 590px;
+    margin: 0 auto;
+    padding-bottom: 20px;
     position: relative;
-    left: 10%;
     top: 100px;
     background-color: #DCEBF1;
     border-radius: 30px;
+}
+
+/* 내부가 float 라 부모가 접히지 않도록 */
+
+#section_N_main::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
 #text1 {
@@ -36,13 +36,11 @@
 }
 
 #text1 #text1_h3 {
-    font-size: 80px;
-}
-
-#text1 #text1_h3 {
     color: #DCEBF1;
     transition: font-size 1s, color 1s;
     font-size: 1px;
+    /* span(50px) 이 1px 줄상자를 넘쳐 다른 요소를 덮지 않도록 줄 높이를 확보 */
+    line-height: 60px;
 }
 
 #text1 #text1_h3:hover {
@@ -64,53 +62,55 @@
 
 #section_2_main_title {
     width: 100%;
-    height: 10%;
+    padding: 18px 0 8px;
     /* background-color: orange; */
-    font-size: 40px;
+    font-size: clamp(24px, 3.2vw, 40px);
 }
 
 #section_2_main_first {
     width: 100%;
-    height: 55%;
+    height: 320px;
     /* background-color: yellow; */
     padding: 0 5%;
+    display: flex;
+    align-items: stretch;
+    gap: 2%;
 }
 
 #section_2_main_first_userImage {
-    width: 23%;
-    height: 80%;
+    flex: 1 1 0;
+    min-width: 0;
+    height: 100%;
     position: relative;
-    top: 10%;
     background-color: #F7E59D;
-    float: left;
-    margin: 0 1%;
     border-radius: 30px;
 }
 
 #section_2_main_first_userImage img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
     border-radius: 30px;
 }
 
 #section_2_main_second {
     width: 100%;
-    height: 35%;
+    padding-top: 20px;
     /* background-color: brown; */
     padding: 0 5%;
+    display: flex;
+    align-items: stretch;
+    gap: 2%;
 }
 
 #section_2_main_second_userInfo {
-    width: 23%;
-    height: 80%;
+    flex: 1 1 0;
+    min-width: 0;
     position: relative;
     background-color: #F7E59D;
-    float: left;
-    margin: 0 1%;
-    font-size: 90%;
+    font-size: clamp(11px, 1vw, 14px);
     border-radius: 30px;
-    padding: 0px 20px;
-    padding-top: 10px;
+    padding: 14px 20px;
 }
 
 #section_2_main_second_userInfo span {
@@ -119,7 +119,7 @@
 
 #section_1_main_title {
     width: 70%;
-    height: 590px;
+    min-height: 590px;
     background-color: grey;
     float: right;
     border-radius: 0px 30px 30px 0px;
@@ -128,7 +128,6 @@
 
 #section_1_main_title_first {
     width: 100%;
-    height: 550px;
     /* background-color: hotpink; */
     border-radius: 0px 30px 30px 0px;
 }
@@ -139,7 +138,7 @@
 
 #section_1_main_title_first_donggi p {
     color: gainsboro;
-    line-height: 30px;
+    line-height: 1.8;
 }
 
 #section_1_main_title_first_goal span {
@@ -160,11 +159,11 @@
 #section_1_main_logo img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 #section_3_main {
     width: 100%;
-    height: 100%;
     /* background-color: green; */
     border-radius: 30px;
     padding: 3%;
@@ -172,28 +171,27 @@
 
 #section_3_main_title {
     width: 100%;
-    height: 12%;
     /* background-color: honeydew; */
 }
 
 #section_3_main_title span {
-    font-size: 40px;
+    font-size: clamp(24px, 3.2vw, 40px);
     line-height: 60px;
 }
 
 #section_3_main_info {
     width: 100%;
-    height: 88%;
     /* background-color: indianred; */
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
 }
 
 #section_3_main_info_first {
-    width: 20%;
-    height: auto;
+    flex: 0 0 20%;
     /* background-color: khaki; */
     text-align: center;
-    float: left;
-    font-size: 20px;
+    font-size: clamp(14px, 1.6vw, 20px);
 }
 
 #section_3_main_info_first img {
@@ -202,11 +200,9 @@
 }
 
 #section_3_main_info_second {
-    padding-left: 20px;
-    width: 80%;
-    height: 100%;
+    flex: 1 1 auto;
+    min-width: 0;
     /* background-color: brown; */
-    float: right;
 }
 
 #section_3_main_info_second>b>span {
@@ -214,5 +210,5 @@
 }
 
 #section_3_main_info_second span {
-    line-height: 30px;
+    line-height: 1.9;
 }

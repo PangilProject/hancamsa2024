@@ -1,27 +1,19 @@
-#section_1 {
+#section_1,
+#section_2,
+#section_3 {
     width: 100%;
-    height: 100%;
+    min-height: var(--section-h);
     background-color: #7DCADD;
     position: static;
 }
 
-#section_2 {
-    width: 100%;
-    height: 100%;
-    background-color: #7DCADD;
-}
-
-#section_3 {
-    width: 100%;
-    height: 100%;
-    background-color: #7DCADD;
-}
-
 #section_N_main {
     width: 80%;
-    height: 590px;
+    max-width: 1200px;
+    min-height: 590px;
+    margin: 0 auto;
+    padding-bottom: 20px;
     position: relative;
-    left: 10%;
     top: 100px;
     background-color: #DCEBF1;
     border-radius: 30px;
@@ -29,9 +21,9 @@
 
 #section_2_main_title {
     width: 100%;
-    height: 10%;
+    padding: 18px 0 8px;
     /* background-color: orange; */
-    font-size: 40px;
+    font-size: clamp(24px, 3.2vw, 40px);
 }
 
 #section_2_main_title_small {
@@ -40,10 +32,13 @@
 
 #section_2_main_first {
     width: 100%;
-    height: 30%;
+    height: 180px;
     /* background-color: yellow; */
     padding: 0 5%;
     border-radius: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
 }
 
 #section_2_main_first img {
@@ -51,6 +46,7 @@
     transition: filter 1s, width 1s, left 1s, top 1s, bottom 1s, height 1s;
     width: 100%;
     height: 100%;
+    object-fit: cover;
     position: relative;
     left: 0%;
     top: 0%;
@@ -68,12 +64,11 @@
 }
 
 #section_2_main_first_userImage {
-    width: 23%;
-    height: 80%;
+    flex: 0 0 23%;
+    min-width: 0;
+    height: 100%;
     position: relative;
-    top: 10%;
     background-color: gainsboro;
-    float: left;
     margin: 0 1%;
     border-radius: 30px;
 }
@@ -81,50 +76,84 @@
 #section_2_main_first_userImage img {
     width: 100%;
     height: 100%;
+    /* 학부 로고처럼 글자가 들어간 이미지는 잘리면 안 되므로 원본대로 채운다 */
+    object-fit: fill;
     border-radius: 30px;
 }
 
 #section_2_main_second {
     width: 100%;
-    height: 10%;
+    padding-top: 10px;
     /* background-color: brown; */
     padding: 0 5%;
     border-radius: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
 }
 
 #section_2_main_second_userInfo {
-    width: 23%;
-    height: 80%;
+    flex: 0 0 23%;
+    min-width: 0;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 8px;
     position: relative;
     background-color: #F7E59D;
-    float: left;
     margin: 0 1%;
-    font-size: 80%;
+    font-size: clamp(10px, 1vw, 13px);
     text-align: center;
     border-radius: 15px;
 }
 
 #section_2_main_second_userInfo span {
     font-size: 150%;
+    line-height: 1.6;
 }
 
 #section_2_main_second_userInfo:hover {
     background-color: #E89EBA;
 }
 
+/* 링크로 감싸진 핫플레이스 카드가 flex 아이템이 되는 경우도 동일하게 취급 */
+
+#section_2_main_first > a,
+#section_2_main_second > a,
+#section_2_main_second > #hotplacelist {
+    flex: 0 0 25%;
+    min-width: 0;
+    display: block;
+}
+
+#section_2_main_first > a > #section_2_main_first_userImage,
+#section_2_main_second > a > #section_2_main_second_userInfo,
+#hotplacelist > #section_2_main_second_userInfo {
+    flex: none;
+    width: 92%;
+    margin: 0 auto;
+}
+
+/* 내부가 float 라 부모가 접히지 않도록 */
+
+#section_N_main::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
 #section_1_main_BG_Image {
     width: 100%;
-    height: 100%;
+    height: var(--section-h);
+    min-height: 420px;
 }
 
 #section_1_main_BG_Image img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
     /* filter: blur(5px); */
-}
-
-#section_2_main_second_userInfo span {
-    line-height: 50px;
 }
 
 #hotplacelist {
@@ -140,7 +169,7 @@
 
 #section_3_main_info {
     width: 40%;
-    height: 490px;
+    min-height: 490px;
     /* background-color: goldenrod; */
     float: left;
     padding: 2%;
@@ -155,17 +184,18 @@
 }
 
 #section_3_main_title_str {
-    font-size: 50px;
+    font-size: clamp(30px, 4.5vw, 50px);
     line-height: 100px;
 }
 
 #section_3_main_info_str {
-    font-size: 15px;
-    line-height: 50px;
+    font-size: clamp(13px, 1.3vw, 15px);
+    line-height: 2.2;
 }
 
 #section_3_main_image img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
     border-radius: 30px;
 }

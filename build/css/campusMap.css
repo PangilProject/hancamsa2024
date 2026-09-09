@@ -1,50 +1,66 @@
-#section_1 {
+#section_1,
+#section_2,
+#section_3 {
     width: 100%;
-    height: 100%;
+    min-height: var(--section-h);
     background-color: #7DCADD;
     position: static;
 }
 
-#section_2 {
+#section_N_main {
     width: 100%;
-    height: 100%;
-    background-color: #7DCADD;
 }
-
-#section_3 {
-    width: 100%;
-    height: 100%;
-    background-color: #7DCADD;
-}
-
-
-/* #section_N_main {
-    width: 80%;
-    height: 590px;
-    position: relative;
-    left: 10%;
-    top: 100px;
-    background-color: white;
-} */
 
 #section_main_imageMap {
     width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
     position: relative;
-    left: 10%;
     top: 100px;
+    padding-bottom: 20px;
     background-color: #DCEBF1;
     border-radius: 30px;
 }
 
+#section_main_imageMap .typing-txt,
+#section_main_imageMap .typing {
+    padding: 0 5%;
+}
+
+/* usemap 좌표는 픽셀 고정이라 js/responsive.js 가 실제 렌더 크기에 맞춰 다시 계산한다 */
+
 #imageMap {
-    margin: 0% 5%;
-    margin-bottom: 2%;
+    display: block;
+    margin: 0 auto 2%;
     width: 90%;
-    height: 520px;
+    height: auto;
+    /* 원래 1036.8 x 520 으로 늘려 그리던 비율. usemap 좌표 기준이라 그대로 유지한다 */
+    aspect-ratio: 1036.8 / 520;
+    object-fit: fill;
     border-radius: 30px;
 }
 
 
-/* #section_main_imageMap p {
+/* [ 모바일용 건물 목록 ] 좁은 화면에서는 이미지맵 대신 버튼 목록을 보여준다 */
+
+#buildingList {
+    display: none;
+    width: 90%;
+    margin: 0 auto 4%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+#buildingList a {
+    display: block;
+    padding: 14px 8px;
+    background-color: #1B8BB8;
+    color: white;
     text-align: center;
-} */
+    font-size: 16px;
+    border-radius: 12px;
+}
+
+#buildingList a:active {
+    background-color: #7DCADD;
+}

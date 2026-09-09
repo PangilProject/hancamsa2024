@@ -1,3 +1,5 @@
+/* [ 사이드 메뉴 ] 넓은 화면에서는 우측 고정, 좁은 화면에서는 하단 가로 바 */
+
 #section_main_sideMenubar {
     position: fixed;
     right: 15px;
@@ -7,6 +9,10 @@
     height: auto;
     border-radius: 10px;
     background-color: #E89EBA;
+}
+
+#section_main_sideMenubar table {
+    width: 100%;
 }
 
 #section_main_sideMenubar td {

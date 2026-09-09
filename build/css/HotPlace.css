@@ -1,19 +1,32 @@
+/* [ 핫플레이스 상세 ] 사진 영역 + 설명 영역을 flex 로 나란히, 좁아지면 세로로 쌓인다 */
+
 #section_N_main {
     padding: 35px;
     border-radius: 30px;
+    display: flex;
+    align-items: stretch;
+    gap: 43px;
 }
 
 #building_first {
-    width: 38%;
-    margin-right: 43px;
-    float: left;
+    flex: 0 0 38%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     border-radius: 30px;
-    border-radius: 30px;
+}
+
+/* 마크업의 <br> 이 flex 아이템이 되어 빈 줄을 만들지 않도록 */
+
+#building_first br {
+    display: none;
 }
 
 #building_img {
     width: 100%;
-    height: 250px;
+    flex: 1 1 0;
+    min-height: 200px;
     background-color: rgb(204, 204, 204);
     border-radius: 30px;
 }
@@ -21,51 +34,47 @@
 #building_img img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
     border-radius: 30px;
 }
 
 #building_second {
-    width: 58%;
+    flex: 1 1 auto;
+    min-width: 0;
     background-color: #1B8BB8;
-    float: left;
     border-radius: 30px;
 }
 
 #building_info {
     width: 100%;
-    height: 520px;
+    height: 100%;
+    overflow: auto;
+    padding: 5%;
     /* background-color: mediumorchid; */
 }
 
 #building_info_title {
-    width: 90%;
-    height: 70px;
+    width: 100%;
     /* background-color: limegreen; */
-    position: relative;
-    left: 5%;
-    top: 5%;
-    font-size: 50px;
+    font-size: clamp(28px, 4vw, 50px);
     text-align: center;
+    margin-bottom: 6%;
 }
 
 #building_info_main {
-    width: 90%;
-    height: 370px;
-    position: relative;
-    top: 10%;
-    left: 5%;
+    width: 100%;
     /* background-color: mediumturquoise; */
-    padding: 5%;
 }
 
 #building_info_main_first {
     width: 100%;
-    height: 70%;
     /* background-color: navajowhite; */
+    line-height: 1.8;
+    margin-bottom: 6%;
 }
 
 #building_info_main_second {
     width: 100%;
-    height: 30%;
     /* background-color: palegreen; */
+    line-height: 1.8;
 }

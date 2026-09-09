@@ -1,10 +1,26 @@
+/*
+[ 반응형 공통 기준값 ]
+- --section-h : 한 화면(section)의 기준 높이. 브레이크포인트별로 responsive.css 에서 재정의된다.
+- --page-w    : 콘텐츠 최대 너비
+*/
+
+:root {
+    --section-h: 790px;
+    --page-w: 1440px;
+}
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     /* font-family: 'JSDongkang-Regular'; */
     /* font-family: 'SDKukdetopokki-Lt'; */
     font-family: 'KOTRA_BOLD-Bold';
     color: black;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
 }
 
 a {
@@ -13,18 +29,24 @@ a {
 
 body {
     width: 100%;
-    height: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
 }
 
 
 /* 
 [ 모든 content가 들어갈 영역 ]
-- width : 1440px | height : 790px
+- 최대 1440px 안에서 화면 너비에 따라 유동적으로 늘어난다.
 */
 
 #section_main {
     margin: 0 auto;
-    width: 1440px;
-    height: 790px;
+    width: 100%;
+    max-width: var(--page-w);
+    min-height: var(--section-h);
     position: relative;
 }
