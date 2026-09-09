@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/all.css" rel="stylesheet">
     <!-- font css -->
     <link href="css/font/font.css" rel="stylesheet">
@@ -11,12 +13,15 @@
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- 반응형 (항상 마지막) -->
+    <link href="css/responsive.css" rel="stylesheet">
 </head>
 
 
 
 
-<body>
+<body class="page-map">
 
     <div id="section_main">
         <div id="section_1">
@@ -47,7 +52,8 @@
                     <br>
                     <p class="typing-txt">건물을 선택해보세요!</p>
                     <p class="typing">&nbsp&nbsp: </p>
-                    <img src="image/mainMap.png" id="imageMap" usemap="#imgMap">
+                    <img src="image/mainMap.png" id="imageMap" usemap="#imgMap"
+                        alt="한동대학교 캠퍼스맵" data-map-basew="1036.8" data-map-baseh="520">
                     <map name="imgMap">
                         <area shape="poly" id="HDH" name="현동홀" coords="370 130 530 130 530 225 495 225 495 165 370 165"
                             href="javascript:check('HDH.html', '현동홀')" onfocus="this.blur()">
@@ -83,6 +89,20 @@
                             href="javascript:check('EBEN.html', '에벤에셀')" onfocus="this.blur()">
 
                     </map>
+                    <!-- 좁은 화면에서는 이미지맵 대신 이 목록이 보인다 -->
+                    <nav id="buildingList">
+                        <a href="./html/HDH.html">현동홀</a>
+                        <a href="./html/NMH.html">느헤미야홀</a>
+                        <a href="./html/NTH.html">뉴턴홀</a>
+                        <a href="./html/ANH.html">올네이션스홀</a>
+                        <a href="./html/CSH.html">코너스톤홀</a>
+                        <a href="./html/OH.html">오석관</a>
+                        <a href="./html/SU.html">학관</a>
+                        <a href="./html/BockJi.html">복지동</a>
+                        <a href="./html/GLC.html">언어교육원</a>
+                        <a href="./html/HCA.html">채플</a>
+                        <a href="./html/EBEN.html">에벤에셀</a>
+                    </nav>
                 </div>
             </div>
         </div>
@@ -90,6 +110,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="js/JS.js"></script>
+    <script src="js/responsive.js"></script>
 </body>
 
 </html>
