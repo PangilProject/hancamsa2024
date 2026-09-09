@@ -1,0 +1,334 @@
+/* =========================================================
+   반응형 브레이크포인트 모음
+   - 항상 다른 css 뒤에 링크할 것
+   - 1024px : 태블릿 가로 / 768px : 태블릿 세로·큰 폰 / 480px : 폰
+   ========================================================= */
+
+
+/* ---------------- 태블릿 가로 (~1024px) ---------------- */
+
+@media (max-width: 1024px) {
+    :root {
+        --section-h: 700px;
+    }
+
+    #section_N_main {
+        width: 90%;
+    }
+
+    #section_main_nav {
+        top: 20px;
+    }
+
+    #section_main_sideMenubar {
+        width: 84px;
+        top: 220px;
+    }
+
+    #section_main_sideMenubar td {
+        width: 84px;
+        font-size: 100%;
+    }
+
+    #section_main_imageMap {
+        width: 90%;
+    }
+}
+
+
+/* ---------------- 태블릿 세로 / 큰 폰 (~768px) ---------------- */
+
+@media (max-width: 768px) {
+    :root {
+        --section-h: auto;
+    }
+
+    #section_main {
+        min-height: auto;
+    }
+
+    .page-popup #section_main {
+        min-height: 100vh;
+        padding: 30px 24px 0;
+    }
+
+    /*
+    top:100px 으로 밀어내던 것을 실제 높이에 반영되게 바꾼다.
+    상단 여백은 부모의 padding 으로 준다 - 자식 margin 은 병합되어 밖으로 빠져나가
+    absolute 인 nav 와 겹치기 때문.
+    */
+    #section_1,
+    #section_2,
+    #section_3 {
+        padding-top: 80px;
+        padding-bottom: 30px;
+    }
+
+    #section_N_main,
+    #section_main_imageMap {
+        width: 92%;
+        height: auto;
+        min-height: 0;
+        top: 0;
+        margin: 0 auto;
+        padding-bottom: 24px;
+    }
+
+    .page-map #section_N_main {
+        width: 100%;
+        margin: 0;
+        padding-bottom: 0;
+    }
+
+    .page-map .typing,
+    .page-map .typing-txt {
+        font-size: 18px !important;
+    }
+
+    #section_main_nav {
+        top: 16px;
+    }
+
+    /* --- 메인(index) --- */
+    .page-home #section_1,
+    .page-home #section_2,
+    .page-home #section_3 {
+        padding: 0;
+    }
+
+    /* --- 캠퍼스맵 : 이미지맵 대신 건물 목록 --- */
+    .page-map #imageMap {
+        display: none;
+    }
+
+    .page-map #buildingList {
+        display: grid;
+    }
+
+    /* --- 소개 페이지 --- */
+    #text1 {
+        float: none;
+        width: 100%;
+    }
+
+    #section_1_main_title {
+        float: none;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        overflow: visible;
+        border-radius: 0px 0px 30px 30px;
+    }
+
+    #section_1_main_logo {
+        width: 100%;
+        height: 220px;
+    }
+
+    #section_2_main_title {
+        height: auto;
+        padding: 16px 5% 0;
+    }
+
+    #section_2_main_first,
+    #section_2_main_second {
+        height: auto;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 12px 5%;
+    }
+
+    #section_2_main_first_userImage,
+    #section_2_main_second_userInfo {
+        flex: 1 1 calc(50% - 12px);
+        height: auto;
+        min-height: 150px;
+        top: 0;
+        margin: 0;
+        overflow: visible;
+    }
+
+    #section_2_main_second_userInfo {
+        min-height: 0;
+        padding: 12px 16px;
+    }
+
+    #section_3_main_info {
+        height: auto;
+        overflow: visible;
+        flex-direction: column;
+    }
+
+    #section_3_main_info_first {
+        flex: 0 0 auto;
+        width: 60%;
+        max-width: 240px;
+        margin: 0 auto;
+    }
+
+    /* --- 건물 페이지 --- */
+    #section_1_main_BG_Image {
+        height: 60vh;
+        min-height: 320px;
+    }
+
+    #section_2_main_first > a,
+    #section_2_main_second > a,
+    #section_2_main_second > #hotplacelist {
+        flex: 1 1 calc(50% - 12px);
+    }
+
+    #section_2_main_first > a > #section_2_main_first_userImage,
+    #section_2_main_second > a > #section_2_main_second_userInfo,
+    #hotplacelist > #section_2_main_second_userInfo {
+        width: 100%;
+        min-height: 0;
+    }
+
+    #section_2_main_first > a > #section_2_main_first_userImage {
+        height: 150px;
+    }
+
+    #section_3_main_title {
+        height: auto;
+        padding: 16px 5% 0;
+    }
+
+    #section_3_main_title_str {
+        line-height: 1.4;
+    }
+
+    #section_3_main_info,
+    #section_3_main_image {
+        float: none;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        overflow: visible;
+        padding: 5%;
+    }
+
+    #section_3_main_image img {
+        height: auto;
+    }
+
+    /* --- 핫플레이스 상세 --- */
+    #section_N_main.hotplace,
+    .page-info #section_N_main {
+        flex-direction: column;
+        gap: 20px;
+        padding: 24px;
+    }
+
+    .page-info #building_first {
+        flex: 0 0 auto;
+    }
+
+    .page-info #building_img {
+        height: 220px;
+    }
+
+    .page-info #building_info {
+        height: auto;
+        overflow: visible;
+    }
+
+    /* --- 사이드 메뉴 : 하단 고정 바 --- */
+    body.page-introduce,
+    body.page-building {
+        padding-bottom: 52px;
+    }
+
+    #section_main_sideMenubar {
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    #section_main_sideMenubar table {
+        display: flex;
+        width: 100%;
+        height: auto !important;
+    }
+
+    #section_main_sideMenubar tbody {
+        display: flex;
+        width: 100%;
+    }
+
+    #section_main_sideMenubar tr {
+        display: flex;
+        flex: 1 1 0;
+    }
+
+    #section_main_sideMenubar tr:empty {
+        display: none;
+    }
+
+    #section_main_sideMenubar td {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1 1 0;
+        width: auto;
+        height: 48px;
+        font-size: 15px;
+        border-radius: 0;
+    }
+}
+
+
+/* ---------------- 폰 (~480px) ---------------- */
+
+@media (max-width: 480px) {
+    #section_N_main,
+    #section_main_imageMap {
+        width: 94%;
+    }
+
+    #section_main_nav {
+        width: 94%;
+        left: 3%;
+    }
+
+    #section_main_nav_menu p {
+        padding: 0 8px;
+    }
+
+    #buildingList {
+        grid-template-columns: 1fr;
+    }
+
+    /* 사진 카드는 2열 유지, 글자 카드만 1열 */
+    #section_2_main_second_userInfo,
+    #section_2_main_second > a,
+    #section_2_main_second > #hotplacelist {
+        flex: 1 1 100%;
+    }
+
+    #section_2_main_first_userImage,
+    #section_2_main_first > a > #section_2_main_first_userImage {
+        height: 130px;
+        min-height: 0;
+    }
+
+    #section_1_main_logo {
+        height: 180px;
+    }
+
+    .page-info #section_N_main {
+        padding: 16px;
+    }
+
+    .page-info #building_img {
+        height: 180px;
+    }
+
+    #section_1_main_BG_Image {
+        height: 45vh;
+        min-height: 260px;
+    }
+}
