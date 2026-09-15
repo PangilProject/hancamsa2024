@@ -1,0 +1,37 @@
+/* [ 404 ] */
+
+.page-404 {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#centerDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 500px;
+    min-height: 350px;
+    padding: 24px;
+    text-align: center;
+    background-color: #888;
+    border-radius: 35px;
+}
+
+#centerDiv h1,
+#centerDiv a {
+    color: white;
+}
+
+#centerDiv h1 {
+    font-size: clamp(22px, 5vw, 32px);
+}
+
+#centerDiv a:hover {
+    color: orange;
+}

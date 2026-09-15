@@ -1,0 +1,16 @@
+    <div class="section">
+        <div class="carousel" id="carousel">
+{% for s in slides %}            <figure class="carousel__slide">
+                <img src="{{ base }}{{ s.image }}" alt="{{ s.alt }}">
+            </figure>
+{% endfor %}            <div class="carousel__dots" role="tablist" aria-label="배경 사진 전환">
+{% for s in slides %}                <button type="button" class="carousel__dot" data-index="{{ loop.index0 }}" aria-label="{{ loop.index }}번째 사진"></button>
+{% endfor %}            </div>
+        </div>
+
+{% include "_nav.html" %}
+
+        <div id="section_main_welcomeTextBox">
+            <h1><b>{{& welcome }}</b></h1>
+        </div>
+    </div>

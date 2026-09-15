@@ -1,0 +1,14 @@
+            <nav id="section_main_nav" aria-label="주 메뉴">
+                <div id="section_main_nav_home">
+                    <a href="{{ base }}index.html">
+                        <p>{{ site.title }}</p>
+                    </a>
+                </div>
+                <div id="section_main_nav_menu">
+{% for item in site.nav %}                    <div>
+                        <a href="{{ base }}{{ item.href }}">
+                            <p>{{ item.label }}</p>
+                        </a>
+                    </div>
+{% endfor %}                </div>
+            </nav>

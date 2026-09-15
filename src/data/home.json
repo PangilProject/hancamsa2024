@@ -1,0 +1,14 @@
+{
+  "slides": [
+    {
+      "image": "image/main1.webp"
+    },
+    {
+      "image": "image/main2.webp"
+    },
+    {
+      "image": "image/main3.webp"
+    }
+  ],
+  "welcome": "한캠사에 오신 것을<br>진심으로 환영합니다"
+}

@@ -1,0 +1,46 @@
+    <div class="section">
+{% include "_sidemenu.html" %}
+        <div id="section_1">
+{% include "_nav.html" %}
+
+            <div id="section_1_main_BG_Image">
+                <img src="{{ base }}{{ b.bg }}" alt="{{ b.name }} 전경">
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div id="section_3">
+            <div class="panel">
+                <div id="section_3_main_title">
+                    <h1 id="section_3_main_title_str">{{ b.name }}</h1>
+                </div>
+                <div id="section_3_main_info">
+                    <p id="section_3_main_info_str">{{ b.desc }}</p>
+                </div>
+                <div id="section_3_main_image">
+                    <img src="{{ base }}{{ b.photo }}" alt="{{ b.name }}" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div id="section_2">
+            <div class="panel">
+                <h2 id="section_2_main_title">핫플레이스</h2>
+{% for row in rows %}                <div class="card-row">
+{% for c in row %}                    <a href="info/{{ c.slug }}.html">
+                        <div class="card-photo">
+                            <img src="{{ base }}{{ c.image }}" alt="{{ c.label }}" loading="lazy">
+                        </div>
+                    </a>
+{% endfor %}                </div>
+                <div class="label-row">
+{% for c in row %}                    <a href="info/{{ c.slug }}.html">
+                        <div class="card-label"><span>{{ c.label }}</span></div>
+                    </a>
+{% endfor %}                </div>
+{% endfor %}            </div>
+        </div>
+    </div>

@@ -1,0 +1,76 @@
+    <div class="section">
+{% include "_sidemenu.html" %}
+        <div id="section_1">
+{% include "_nav.html" %}
+
+            <div class="panel">
+                <div id="text1">
+                    <p class="typing-txt">{{ hint }}</p>
+                    <p class="typing" aria-hidden="true">:&nbsp;</p>
+                    <h1 id="text1_h3" tabindex="0">
+{% for w in brand %}                        <span>{{ w.initial }}</span>{{ w.rest }}{% if not loop.last %}<br>{% endif %}
+{% endfor %}                    </h1>
+                    <div id="section_1_main_logo">
+                        <img src="{{ base }}{{ logo }}" alt="한동대학교 캠퍼스 전경">
+                    </div>
+                </div>
+                <div id="section_1_main_title">
+                    <div id="section_1_main_title_first">
+                        <section id="section_1_main_title_first_donggi">
+                            <h2><span>제작 동기</span></h2>
+                            <p>{{ motive }}</p>
+                        </section>
+                        <section id="section_1_main_title_first_goal">
+                            <h2><span>개발 목표</span></h2>
+                            <ul>
+{% for g in goals %}                                <li>{{ g }}</li>
+{% endfor %}                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div id="section_2">
+            <div class="panel">
+                <h2 id="section_2_main_title">한캠사 Developer</h2>
+                <div class="card-row">
+{% for d in developers %}                    <div class="card-photo">
+                        <img src="{{ base }}{{ d.photo }}" alt="{{ d.name }}" loading="lazy">
+                    </div>
+{% endfor %}                </div>
+                <div class="label-row">
+{% for d in developers %}                    <div class="card-label">
+                        <span>{{ d.name }}</span><br>
+                        - NickName : {{ d.nickname }}<br>
+                        : {{ d.intro }}
+                    </div>
+{% endfor %}                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div id="section_3">
+            <div class="panel">
+                <div id="section_3_main">
+                    <div id="section_3_main_title">
+                        <h2><span>{{ course.name }}</span></h2>
+                    </div>
+                    <div id="section_3_main_info">
+                        <div id="section_3_main_info_first">
+                            <img src="{{ base }}{{ course.professor_photo }}" alt="{{ course.professor }}" loading="lazy">
+                            [ {{ course.professor }} ]
+                        </div>
+                        <div id="section_3_main_info_second">
+{% for g in course.groups %}                            <b><span>{{ g.heading }}</span></b><br>
+{% for line in g.lines %}                            <span>{{ line }}</span><br>
+{% endfor %}                            <br>
+{% endfor %}                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,198 +1,155 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>오석관 · 한캠사</title>
+    <meta name="description" content="한동의 도서관이라고 할 수 있는 오석관은 슬로건길을 지나 농구장 뒤, 뉴턴홀 옆에 위치해 있습니다. 1층에는 도서관, 2층과 3층에는 열람실이 있어 공부를 하기 원하는 학생들은 이곳에서 공부를 할 수 있습니다. 3층에는 히즈빈스와 CU가 있어 음료를 사거나 간단하게 배">
+    <link rel="icon" href="../image/HGU_logo.webp">
     <link href="../css/all.css" rel="stylesheet">
-    <!-- font css -->
     <link href="../css/font/font.css" rel="stylesheet">
-    <!-- index css -->
     <link href="../css/Building.css" rel="stylesheet">
     <link href="../css/nav.css" rel="stylesheet">
     <link href="../css/sideMenubar.css" rel="stylesheet">
-
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
 
     <!-- 반응형 (항상 마지막) -->
     <link href="../css/responsive.css" rel="stylesheet">
 </head>
 
+<body class="page-building">
+    <div class="section">
+        <nav id="section_main_sideMenubar" aria-label="구역 바로가기">
+            <ul>
+                <li><a href="#section_3">건물 소개</a></li>
+                <li><a href="#section_2">핫플레이스</a></li>
+            </ul>
+        </nav>
 
-
-
-<body class="page-building" onload="javascript:alert('이곳은 오석관입니다')">
-
-    <div id="section_main">
-        <div id="section_main_sideMenubar">
-            <table>
-                <tr>
-                    <td><a href="#section_3">사이트 소개</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#section_2">핫플레이스</a></td>
-                </tr>
-                <tr>
-                </tr>
-            </table>
-        </div>
         <div id="section_1">
-
-            <div id="section_main_nav">
+            <nav id="section_main_nav" aria-label="주 메뉴">
                 <div id="section_main_nav_home">
-                    <a href="../index.html" style="text-decoration: none;">
+                    <a href="../index.html">
                         <p>한캠사</p>
                     </a>
-
                 </div>
-
                 <div id="section_main_nav_menu">
-                    <div id="section_main_nav_menu_first">
+                    <div>
                         <a href="../introduce.html">
                             <p>소개</p>
                         </a>
                     </div>
-                    <div id="section_main_nav_menu_seciond">
+                    <div>
                         <a href="../campusMap.html">
                             <p>캠퍼스맵</p>
                         </a>
                     </div>
                 </div>
-            </div>
+            </nav>
+
 
             <div id="section_1_main_BG_Image">
-                <img src="../image/Building/OH.jpg">
+                <img src="../image/Building/OH.webp" alt="오석관 전경">
             </div>
-
         </div>
     </div>
-    <div id="section_main">
+
+    <div class="section">
         <div id="section_3">
-            <div id="section_N_main">
+            <div class="panel">
                 <div id="section_3_main_title">
-                    <div id="section_3_main_title_str">오석관</div>
+                    <h1 id="section_3_main_title_str">오석관</h1>
                 </div>
                 <div id="section_3_main_info">
-                    <div id="section_3_main_info_str">
-                        : 한동의 도서관이라고 할 수 있는 오석관은 슬로건길을 지나 농구장 뒤, 뉴턴홀 옆에 위치해 있습니다. 1층에는 도서관, 2층과 3층에는 열람실이 있어 공부를 하기 원하는
-                        학생들은 이곳에서 공부를 할 수 있습니다. 3층에는 히즈빈스와 CU가 있어 음료를 사거나 간단하게 배를 채울 수 있습니다. 또한, 3층에 뉴턴홀과 연결되는 구름다리가
-                        있습니다.</div>
+                    <p id="section_3_main_info_str">: 한동의 도서관이라고 할 수 있는 오석관은 슬로건길을 지나 농구장 뒤, 뉴턴홀 옆에 위치해 있습니다. 1층에는 도서관, 2층과 3층에는 열람실이 있어 공부를 하기 원하는 학생들은 이곳에서 공부를 할 수 있습니다. 3층에는 히즈빈스와 CU가 있어 음료를 사거나 간단하게 배를 채울 수 있습니다. 또한, 3층에 뉴턴홀과 연결되는 구름다리가 있습니다.</p>
                 </div>
                 <div id="section_3_main_image">
-
-                    <img src="../image/Building/OH.jpg">
-
+                    <img src="../image/Building/OH.webp" alt="오석관" loading="lazy">
                 </div>
             </div>
         </div>
     </div>
-    <div id="section_main">
+
+    <div class="section">
         <div id="section_2">
-            <div id="section_N_main">
-                <div id="section_2_main_title">
-                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp핫플레이스
-                </div>
-                <div id="section_2_main_first">
-                    <a href="info/코딩스페이스.html">
-                        <div id="section_2_main_first_userImage">
-                            <img src="../image//HotPlace/codingspace.jpg">
+            <div class="panel">
+                <h2 id="section_2_main_title">핫플레이스</h2>
+                <div class="card-row">
+                    <a href="info/coding-space.html">
+                        <div class="card-photo">
+                            <img src="../image//HotPlace/codingspace.webp" alt="코딩스페이스" loading="lazy">
                         </div>
                     </a>
-                    <a href="info/상상랩.html">
-                        <div id="section_2_main_first_userImage">
-                            <img src="../image//HotPlace/sangsanglab.jpg">
+                    <a href="info/imagination-lab.html">
+                        <div class="card-photo">
+                            <img src="../image//HotPlace/sangsanglab.webp" alt="상상랩" loading="lazy">
                         </div>
                     </a>
-                    <a href="info/무인씨유.html">
-                        <div id="section_2_main_first_userImage">
-                            <img src="../image//HotPlace/mooinCU.jpg">
+                    <a href="info/cu-unmanned.html">
+                        <div class="card-photo">
+                            <img src="../image//HotPlace/mooinCU.webp" alt="무인CU" loading="lazy">
                         </div>
                     </a>
-                    <a href="info/학술카페.html">
-                        <div id="section_2_main_first_userImage">
-                            <img src="../image//HotPlace/hacksul.jpg">
+                    <a href="info/academic-cafe.html">
+                        <div class="card-photo">
+                            <img src="../image//HotPlace/hacksul.webp" alt="학술카페" loading="lazy">
                         </div>
                     </a>
                 </div>
-                <div id="section_2_main_second">
-                    <a href="info/코딩스페이스.html">
-                        <div id="section_2_main_second_userInfo">
-                            <span>코딩스페이스</span>
-                        </div>
+                <div class="label-row">
+                    <a href="info/coding-space.html">
+                        <div class="card-label"><span>코딩스페이스</span></div>
                     </a>
-                    <a href="info/상상랩.html">
-                        <div id="section_2_main_second_userInfo">
-                            <span>상상랩</span>
-
-                        </div>
+                    <a href="info/imagination-lab.html">
+                        <div class="card-label"><span>상상랩</span></div>
                     </a>
-                    <a href="info/무인씨유.html">
-                        <div id="section_2_main_second_userInfo">
-                            <span>무인CU</span>
-
-                        </div>
+                    <a href="info/cu-unmanned.html">
+                        <div class="card-label"><span>무인CU</span></div>
                     </a>
-                    <a href="info/학술카페.html">
-                        <div id="section_2_main_second_userInfo">
-                            <span>학술카페</span>
-                        </div>
+                    <a href="info/academic-cafe.html">
+                        <div class="card-label"><span>학술카페</span></div>
                     </a>
-
-
                 </div>
-                <div id="section_2_main_first">
-                    <a href="info/열람실1.html">
-                        <div id="section_2_main_first_userImage">
-                            <img src="../image//HotPlace/yealramsil.jpg">
+                <div class="card-row">
+                    <a href="info/reading-room-1.html">
+                        <div class="card-photo">
+                            <img src="../image//HotPlace/yealramsil.webp" alt="열람실" loading="lazy">
                         </div>
                     </a>
-                    <a href="info/히즈빈스.html">
-                        <div id="section_2_main_first_userImage">
-                            <img src="../image//HotPlace/hisbeans.jpg">
+                    <a href="info/hisbeans.html">
+                        <div class="card-photo">
+                            <img src="../image//HotPlace/hisbeans.webp" alt="히즈빈스" loading="lazy">
                         </div>
                     </a>
-                    <a href="info/도서관.html">
-                        <div id="section_2_main_first_userImage">
-                            <img src="../image/update.png">
+                    <a href="info/library.html">
+                        <div class="card-photo">
+                            <img src="../image/update.webp" alt="도서관" loading="lazy">
                         </div>
                     </a>
-                    <a href="info/SWPLLAZ.html">
-                        <div id="section_2_main_first_userImage">
-                            <img src="../image/update.png">
+                    <a href="info/sw-pllaz.html">
+                        <div class="card-photo">
+                            <img src="../image/update.webp" alt="SW PLLAZ" loading="lazy">
                         </div>
                     </a>
                 </div>
-
-                <div id="section_2_main_second">
-                    <a href="info/열람실1.html">
-                        <div id="section_2_main_second_userInfo">
-                            <span>열람실</span>
-                        </div>
+                <div class="label-row">
+                    <a href="info/reading-room-1.html">
+                        <div class="card-label"><span>열람실</span></div>
                     </a>
-                    <a href="info/히즈빈스.html">
-                        <div id="section_2_main_second_userInfo">
-                            <span>히즈빈스</span>
-                        </div>
+                    <a href="info/hisbeans.html">
+                        <div class="card-label"><span>히즈빈스</span></div>
                     </a>
-                    <a href="info/도서관.html">
-                        <div id="section_2_main_second_userInfo">
-                            <span>도서관</span>
-                        </div>
+                    <a href="info/library.html">
+                        <div class="card-label"><span>도서관</span></div>
                     </a>
-                    <a href="info/SWPLLAZ.html">
-                        <div id="section_2_main_second_userInfo">
-                            <span>SW PLLAZ</span>
-                        </div>
+                    <a href="info/sw-pllaz.html">
+                        <div class="card-label"><span>SW PLLAZ</span></div>
                     </a>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="../js/JS.js"></script>
+
 </body>
 
 </html>

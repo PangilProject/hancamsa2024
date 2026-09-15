@@ -1,0 +1,71 @@
+{
+  "areas": [
+    {
+      "shape": "poly",
+      "name": "현동홀",
+      "coords": "370 130 530 130 530 225 495 225 495 165 370 165",
+      "target": "HDH"
+    },
+    {
+      "shape": "poly",
+      "name": "느헤미야홀",
+      "coords": "180 225 305 225 305 160 340 160 340 255 180 255",
+      "target": "NMH"
+    },
+    {
+      "shape": "rect",
+      "name": "뉴턴홀",
+      "coords": "175 310 330 330",
+      "target": "NTH"
+    },
+    {
+      "shape": "poly",
+      "name": "올네이션스홀",
+      "coords": "180 330 210 330 210 410 225 410 225 445 180 445",
+      "target": "ANH"
+    },
+    {
+      "shape": "rect",
+      "name": "코너스톤홀",
+      "coords": "235 410 280 445",
+      "target": "CSH"
+    },
+    {
+      "shape": "rect",
+      "name": "오석관",
+      "coords": "285 355 330 450",
+      "target": "OH"
+    },
+    {
+      "shape": "poly",
+      "name": "학관",
+      "coords": "570 340 710 340 710 405 685 405 685 430 598 430 598 405 570 405",
+      "target": "SU"
+    },
+    {
+      "shape": "poly",
+      "name": "복지동",
+      "coords": "740 350 820 350 820 370 760 370 760 390 740 390",
+      "target": "BockJi"
+    },
+    {
+      "shape": "rect",
+      "name": "언어교육원",
+      "coords": "515 20 570 40",
+      "target": "GLC"
+    },
+    {
+      "shape": "rect",
+      "name": "채플",
+      "coords": "610 15 725 35",
+      "target": "HCA"
+    },
+    {
+      "shape": "rect",
+      "name": "에벤에셀",
+      "coords": "835 145 950 165",
+      "target": "EBEN"
+    }
+  ],
+  "prompt": "건물을 선택해보세요!"
+}

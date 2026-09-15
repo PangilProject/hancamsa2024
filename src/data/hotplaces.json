@@ -1,0 +1,766 @@
+[
+  {
+    "title": "학술카페",
+    "images": [
+      "image/HotPlace/hacksul.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "academic-cafe",
+    "draft": false
+  },
+  {
+    "title": "에인트 & BEAT",
+    "images": [
+      "image/HotPlace/aint.webp",
+      "image/HotPlace/robotCafe.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "aint-beat",
+    "draft": false
+  },
+  {
+    "title": "알파문구",
+    "images": [
+      "image/HotPlace/alpha.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "alpha-stationery",
+    "draft": false
+  },
+  {
+    "title": "ATM",
+    "images": [
+      "image/HotPlace/ATM.webp",
+      "image/HotPlace/ATM2.webp"
+    ],
+    "body": [
+      "우리가 학교를 생활하면서 입금을 하거나 출금을 해야하는 순간들이 많이 존재합니다.",
+      "하지만, 이 업무들 때문에 포항 시내를 나가는 것은 너무 힘든 일입니다!",
+      "출금이나 입금 등을 해야할 일이 생겼을 때 현동홀에 가는 것을 추천합니다!",
+      "현동홀에는 각 은행사들의 종류별로 ATM기가 구비되어있어 각자 자신에게 맞는 은행의 ATM에 들어가 업무를 진행할 수 있습니다!",
+      "평봉필드를 바라보고 있는 쪽 현동홀에 있습니다!"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "atm",
+    "draft": false
+  },
+  {
+    "title": "오디토리움",
+    "images": [
+      "image/HotPlace/oditorium.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "auditorium",
+    "draft": false
+  },
+  {
+    "title": "보아스메디컬",
+    "images": [
+      "image/HotPlace/boas.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "boaz-medical",
+    "draft": false
+  },
+  {
+    "title": "버거킹",
+    "images": [
+      "image/update.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "burger-king",
+    "draft": false
+  },
+  {
+    "title": "경영경제학부 사무실",
+    "images": [
+      "image/major/GyeongGyeong.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "business-economics-office",
+    "draft": false
+  },
+  {
+    "title": "학생식당",
+    "images": [
+      "image/HotPlace/hackgwan.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "cafeteria",
+    "draft": false
+  },
+  {
+    "title": "교목실",
+    "images": [
+      "image/update.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "chaplain-office",
+    "draft": false
+  },
+  {
+    "title": "동방",
+    "images": [
+      "image/HotPlace/dongbang.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "club-room",
+    "draft": false
+  },
+  {
+    "title": "총동연 오피스",
+    "images": [
+      "image/update.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "club-union-office",
+    "draft": false
+  },
+  {
+    "title": "코딩스페이스",
+    "images": [
+      "image/HotPlace/codingspace.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]",
+      "코딩스페이스란 줄여서 코스라고도 부릅니다!",
+      "열람실의 무거운 분위기에서 벗어나 공부하고 싶은 사람들이 많이 찾는 장소죠.",
+      "그다지 시끄럽지도 않고 조용한 분위기여서 많은 사람들에게 인기가 있는 곳입니다.",
+      "카페와 비슷한 인테리어가 더 편안한 분위기를 줘 학교 열람실의 숨막힌 공기가 싫다면 코딩스페이스에 가는 것도 한가지 방법입니다."
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "coding-space",
+    "draft": false
+  },
+  {
+    "title": "커뮤니케이션학부 사무실",
+    "images": [
+      "image/update.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "communication-office",
+    "draft": true
+  },
+  {
+    "title": "콘텐츠융합디자인학부 사무실",
+    "images": [
+      "image/update.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "content-design-office",
+    "draft": false
+  },
+  {
+    "title": "상담심리사회복지학부 사무실",
+    "images": [
+      "image/major/sangsa.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "counseling-welfare-office",
+    "draft": false
+  },
+  {
+    "title": "창의융합교육원 사무실",
+    "images": [
+      "image/major/changui.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "creative-convergence-office",
+    "draft": false
+  },
+  {
+    "title": "무인CU",
+    "images": [
+      "image/HotPlace/mooinCU.webp",
+      "image/HotPlace/mooinCU2.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "cu-unmanned",
+    "draft": false
+  },
+  {
+    "title": "서류ATM",
+    "images": [
+      "image/HotPlace/HTATM.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "document-atm",
+    "draft": false
+  },
+  {
+    "title": "이디야",
+    "images": [
+      "image/update.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "ediya",
+    "draft": false
+  },
+  {
+    "title": "전산전자공학부 사무실",
+    "images": [
+      "image/update.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "electronics-office",
+    "draft": false
+  },
+  {
+    "title": "글로벌리더십학부 사무실",
+    "images": [
+      "image/major/GLS.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "gls-office",
+    "draft": false
+  },
+  {
+    "title": "GS25",
+    "images": [
+      "image/HotPlace/GS25.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "gs25",
+    "draft": false
+  },
+  {
+    "title": "한동라운지",
+    "images": [
+      "image/update.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "handong-lounge",
+    "draft": false
+  },
+  {
+    "title": "헤브론",
+    "images": [
+      "image/HotPlace/haebron.webp",
+      "image/HotPlace/haebron2.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "hebron",
+    "draft": false
+  },
+  {
+    "title": "히즈빈스",
+    "images": [
+      "image/HotPlace/hisbeans.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "hisbeans",
+    "draft": false
+  },
+  {
+    "title": "ICT창업학부 사무실",
+    "images": [
+      "image/major/ICT.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "ict-office",
+    "draft": false
+  },
+  {
+    "title": "이미지스테이션",
+    "images": [
+      "image/HotPlace/imageStation.webp",
+      "image/HotPlace/imageStation2.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "image-station",
+    "draft": false
+  },
+  {
+    "title": "상상랩",
+    "images": [
+      "image/HotPlace/sangsanglab.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [],
+    "slug": "imagination-lab",
+    "draft": false
+  },
+  {
+    "title": "인브리즈",
+    "images": [
+      "image/HotPlace/inbreeze.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "in-breeze",
+    "draft": false
+  },
+  {
+    "title": "국제어문학부 사무실",
+    "images": [
+      "image/major/GookU.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "intl-languages-office",
+    "draft": false
+  },
+  {
+    "title": "중구남방",
+    "images": [
+      "image/update.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "junggunam-club",
+    "draft": false
+  },
+  {
+    "title": "법학부 사무실",
+    "images": [
+      "image/update.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "law-office",
+    "draft": false
+  },
+  {
+    "title": "도서관",
+    "images": [
+      "image/update.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "library",
+    "draft": false
+  },
+  {
+    "title": "생명공학부 사무실",
+    "images": [
+      "image/update.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "life-science-office",
+    "draft": false
+  },
+  {
+    "title": "기계제어공학부 학술카페",
+    "images": [
+      "image/HotPlace/gigayehacksoolcafe.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "mechanical-cafe",
+    "draft": false
+  },
+  {
+    "title": "기계제어공학부 사무실",
+    "images": [
+      "image/update.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "mechanical-office",
+    "draft": false
+  },
+  {
+    "title": "맘스키친",
+    "images": [
+      "image/HotPlace/moms.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "moms-kitchen",
+    "draft": false
+  },
+  {
+    "title": "팔각정",
+    "images": [
+      "image/HotPlace/palgackjeong.webp",
+      "image/HotPlace/palgackjeong2.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "octagonal-pavilion",
+    "draft": false
+  },
+  {
+    "title": "열람실1",
+    "images": [
+      "image/HotPlace/yealramsil.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "reading-room-1",
+    "draft": false
+  },
+  {
+    "title": "빨간너구리",
+    "images": [
+      "image/update.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "red-raccoon",
+    "draft": false
+  },
+  {
+    "title": "공용강의실",
+    "images": [
+      "image/HotPlace/CNST_lectureRoom.webp",
+      "image/HotPlace/CNST_lectureRoom2.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "shared-classroom",
+    "draft": false
+  },
+  {
+    "title": "구름다리",
+    "images": [
+      "image/HotPlace/GoormDari.webp",
+      "image/HotPlace/GoormDari2.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "sky-bridge",
+    "draft": false
+  },
+  {
+    "title": "총학생회 오피스",
+    "images": [
+      "image/update.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "student-council-office",
+    "draft": false
+  },
+  {
+    "title": "학생지원팀",
+    "images": [
+      "image/HotPlace/hacksaengjiwonteam.webp",
+      "image/HotPlace/hacksaengjiwonteam2.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]",
+      "학생지원팀은 매우 많은 일을 하는 부서입니다.",
+      "우리가 학교를 졸업하기 전에 무조건 2번 해야 하는 사회봉사는 학생지원팀이 담당하고 있습니다.",
+      "또한, 우리가 학교에 동아리 홍보 포스터 등 다양한 것을 부착하고 싶다면 학생지원팀에 가 도장을 받아야지만 부착할 수 있습니다.",
+      "코로나 관리, 팀모임, 강의실 관리, 한스트 등 이 많은 것들이 전부 학생지원팀의 업무입니다!",
+      "이렇듯 학생지원팀은 학교 생활을 하면서 갈 기회가 정말 많은 곳입니다.",
+      "학생 지원팀의 위치에 대해서 잘 알아두는 것이 중요합니당!"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "student-support",
+    "draft": false
+  },
+  {
+    "title": "SW PLLAZ",
+    "images": [
+      "image/update.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "sw-pllaz",
+    "draft": false
+  },
+  {
+    "title": "예소드",
+    "images": [
+      "image/HotPlace/yesod.webp",
+      "image/update.webp"
+    ],
+    "body": [
+      "[ 여기는 어떤 장소인가요? ]"
+    ],
+    "extra_heading": "[ 이외의 정보도 있나요? ]",
+    "extra_lines": [
+      "없습니다!"
+    ],
+    "slug": "yesod",
+    "draft": false
+  }
+]

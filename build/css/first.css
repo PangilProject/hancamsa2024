@@ -1,0 +1,13 @@
+/* [ 인트로 애니메이션 ] */
+
+.page-first {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+lottie-player {
+    width: min(300px, 80vw);
+    height: min(300px, 80vw);
+}

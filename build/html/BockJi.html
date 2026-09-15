@@ -1,194 +1,155 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>복지동 · 한캠사</title>
+    <meta name="description" content="복지동은 한동대학교 학생들이 가장 많이 찾는 곳 중 하나로 학관과 기숙사 사이에 위치해 있습니다. 이곳은 카페와 식당, 문구점, 병원 등 다양한 편의시설이 위치해 있는 곳입니다. 건물명에 있는 &#x27;복지&#x27;처럼 정말 학생들에게 다양한 복지를 제공하는 건물입니다. 음식도 팔고">
+    <link rel="icon" href="../image/HGU_logo.webp">
     <link href="../css/all.css" rel="stylesheet">
-    <!-- font css -->
     <link href="../css/font/font.css" rel="stylesheet">
-    <!-- index css -->
     <link href="../css/Building.css" rel="stylesheet">
     <link href="../css/nav.css" rel="stylesheet">
     <link href="../css/sideMenubar.css" rel="stylesheet">
-
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
 
     <!-- 반응형 (항상 마지막) -->
     <link href="../css/responsive.css" rel="stylesheet">
 </head>
 
+<body class="page-building">
+    <div class="section">
+        <nav id="section_main_sideMenubar" aria-label="구역 바로가기">
+            <ul>
+                <li><a href="#section_3">건물 소개</a></li>
+                <li><a href="#section_2">핫플레이스</a></li>
+            </ul>
+        </nav>
 
-
-
-<body class="page-building" onload="javascript:alert('이곳은 복지동입니다')">
-
-    <div id="section_main">
-        <div id="section_main_sideMenubar">
-            <table>
-                <tr>
-                    <td><a href="#section_3">사이트 소개</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#section_2">핫플레이스</a></td>
-                </tr>
-                <tr>
-                </tr>
-            </table>
-        </div>
         <div id="section_1">
-
-            <div id="section_main_nav">
+            <nav id="section_main_nav" aria-label="주 메뉴">
                 <div id="section_main_nav_home">
-                    <a href="../index.html" style="text-decoration: none;">
+                    <a href="../index.html">
                         <p>한캠사</p>
                     </a>
-
                 </div>
-
                 <div id="section_main_nav_menu">
-                    <div id="section_main_nav_menu_first">
+                    <div>
                         <a href="../introduce.html">
                             <p>소개</p>
                         </a>
                     </div>
-                    <div id="section_main_nav_menu_seciond">
+                    <div>
                         <a href="../campusMap.html">
                             <p>캠퍼스맵</p>
                         </a>
                     </div>
                 </div>
-            </div>
+            </nav>
+
 
             <div id="section_1_main_BG_Image">
-                <img src="../image/Building/bockjidong.jpg">
+                <img src="../image/Building/bockjidong.webp" alt="복지동 전경">
             </div>
-
         </div>
     </div>
-    <div id="section_main">
+
+    <div class="section">
         <div id="section_3">
-            <div id="section_N_main">
+            <div class="panel">
                 <div id="section_3_main_title">
-                    <div id="section_3_main_title_str">복지동</div>
+                    <h1 id="section_3_main_title_str">복지동</h1>
                 </div>
                 <div id="section_3_main_info">
-                    <div id="section_3_main_info_str">
-                        : 복지동은 한동대학교 학생들이 가장 많이 찾는 곳 중 하나로 학관과 기숙사 사이에 위치해 있습니다. 이곳은 카페와 식당, 문구점, 병원 등 다양한 편의시설이 위치해 있는
-                        곳입니다. 건물명에 있는 '복지'처럼 정말 학생들에게 다양한 복지를 제공하는 건물입니다. 음식도 팔고 진료도 받을 수 있는 것처럼 건물명 그대로의 역할을 하는 곳입니다.
-                    </div>
+                    <p id="section_3_main_info_str">: 복지동은 한동대학교 학생들이 가장 많이 찾는 곳 중 하나로 학관과 기숙사 사이에 위치해 있습니다. 이곳은 카페와 식당, 문구점, 병원 등 다양한 편의시설이 위치해 있는 곳입니다. 건물명에 있는 &#x27;복지&#x27;처럼 정말 학생들에게 다양한 복지를 제공하는 건물입니다. 음식도 팔고 진료도 받을 수 있는 것처럼 건물명 그대로의 역할을 하는 곳입니다.</p>
                 </div>
                 <div id="section_3_main_image">
-
-                    <img src="../image/Building/bockjidong.jpg">
-
+                    <img src="../image/Building/bockjidong.webp" alt="복지동" loading="lazy">
                 </div>
             </div>
         </div>
     </div>
-    <div id="section_main">
+
+    <div class="section">
         <div id="section_2">
-            <div id="section_N_main">
-                <div id="section_2_main_title">
-                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp핫플레이스
-                </div>
-                <div id="section_2_main_first">
-                    <a href="info/보아스메디컬.html">
-                        <div id="section_2_main_first_userImage">
-                            <img src="../image//HotPlace/boas.jpeg">
+            <div class="panel">
+                <h2 id="section_2_main_title">핫플레이스</h2>
+                <div class="card-row">
+                    <a href="info/boaz-medical.html">
+                        <div class="card-photo">
+                            <img src="../image//HotPlace/boas.webp" alt="보아스메디컬" loading="lazy">
                         </div>
                     </a>
-                    <a href="info/인브리즈.html">
-                        <div id="section_2_main_first_userImage">
-                            <img src="../image//HotPlace/inbreeze.jpg">
+                    <a href="info/in-breeze.html">
+                        <div class="card-photo">
+                            <img src="../image//HotPlace/inbreeze.webp" alt="인브리즈" loading="lazy">
                         </div>
                     </a>
-                    <a href="info/알파문구.html">
-                        <div id="section_2_main_first_userImage">
-                            <img src="../image//HotPlace/alpha.jpg">
+                    <a href="info/alpha-stationery.html">
+                        <div class="card-photo">
+                            <img src="../image//HotPlace/alpha.webp" alt="알파문구" loading="lazy">
                         </div>
                     </a>
-                    <a href="info/GS25.html">
-                        <div id="section_2_main_first_userImage">
-                            <img src="../image//HotPlace/GS25.jpg">
-                        </div>
-                    </a>
-                </div>
-                <div id="section_2_main_second">
-                    <a href="info/보아스메디컬.html">
-                        <div id="section_2_main_second_userInfo">
-                            <span>보아스메디컬</span>
-                        </div>
-                    </a>
-                    <a href="info/인브리즈.html"></a>
-                    <div id="section_2_main_second_userInfo">
-                        <span>인브리즈</span>
-                    </div>
-                    </a>
-                    <a href="info/알파문구.html"></a>
-                    <div id="section_2_main_second_userInfo">
-                        <span>알파문구</span>
-                    </div>
-                    </a>
-                    <a href="info/GS25.html"></a>
-                    <div id="section_2_main_second_userInfo">
-                        <span>GS25</span>
-                    </div>
-                    </a>
-
-                </div>
-                <div id="section_2_main_first">
-                    <a href="info/버거킹.html">
-                        <div id="section_2_main_first_userImage">
-                            <img src="../image/update.png">
-                        </div>
-                    </a>
-                    <a href="info/이디야.html">
-                        <div id="section_2_main_first_userImage">
-                            <img src="../image/update.png">
-                        </div>
-                    </a>
-                    <a href="info/빨간너구리.html">
-                        <div id="section_2_main_first_userImage">
-                            <img src="../image/update.png">
-                        </div>
-                    </a>
-                    <a href="info/한동라운지.html">
-                        <div id="section_2_main_first_userImage">
-                            <img src="../image/update.png">
+                    <a href="info/gs25.html">
+                        <div class="card-photo">
+                            <img src="../image//HotPlace/GS25.webp" alt="GS25" loading="lazy">
                         </div>
                     </a>
                 </div>
-                <div id="section_2_main_second">
-                    <a href="info/버거킹.html">
-                        <div id="section_2_main_second_userInfo">
-                            <span>버거킹</span>
+                <div class="label-row">
+                    <a href="info/boaz-medical.html">
+                        <div class="card-label"><span>보아스메디컬</span></div>
+                    </a>
+                    <a href="info/in-breeze.html">
+                        <div class="card-label"><span>인브리즈</span></div>
+                    </a>
+                    <a href="info/alpha-stationery.html">
+                        <div class="card-label"><span>알파문구</span></div>
+                    </a>
+                    <a href="info/gs25.html">
+                        <div class="card-label"><span>GS25</span></div>
+                    </a>
+                </div>
+                <div class="card-row">
+                    <a href="info/burger-king.html">
+                        <div class="card-photo">
+                            <img src="../image/update.webp" alt="버거킹" loading="lazy">
                         </div>
                     </a>
-                    <a href="info/이디야.html">
-                        <div id="section_2_main_second_userInfo">
-                            <span>이디야</span>
+                    <a href="info/ediya.html">
+                        <div class="card-photo">
+                            <img src="../image/update.webp" alt="이디야" loading="lazy">
                         </div>
                     </a>
-                    <a href="info/빨간너구리.html">
-                        <div id="section_2_main_second_userInfo">
-                            <span>빨간너구리</span>
+                    <a href="info/red-raccoon.html">
+                        <div class="card-photo">
+                            <img src="../image/update.webp" alt="빨간너구리" loading="lazy">
                         </div>
                     </a>
-                    <a href="info/한동라운지.html">
-                        <div id="section_2_main_second_userInfo">
-                            <span>한동라운지</span>
+                    <a href="info/handong-lounge.html">
+                        <div class="card-photo">
+                            <img src="../image/update.webp" alt="한동라운지" loading="lazy">
+                        </div>
+                    </a>
+                </div>
+                <div class="label-row">
+                    <a href="info/burger-king.html">
+                        <div class="card-label"><span>버거킹</span></div>
+                    </a>
+                    <a href="info/ediya.html">
+                        <div class="card-label"><span>이디야</span></div>
+                    </a>
+                    <a href="info/red-raccoon.html">
+                        <div class="card-label"><span>빨간너구리</span></div>
+                    </a>
+                    <a href="info/handong-lounge.html">
+                        <div class="card-label"><span>한동라운지</span></div>
                     </a>
                 </div>
             </div>
         </div>
     </div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="../js/JS.js"></script>
+
 </body>
 
 </html>

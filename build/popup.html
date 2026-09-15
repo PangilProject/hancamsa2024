@@ -1,35 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>환영합니다 · 한캠사</title>
+    <meta name="description" content="한캠사 소개 안내">
+    <link rel="icon" href="image/HGU_logo.webp">
+    <link href="css/all.css" rel="stylesheet">
     <link href="css/font/font.css" rel="stylesheet">
     <link href="css/popup.css" rel="stylesheet">
-    <script src="js/popup.js"></script>
-    <link href="css/all.css" rel="stylesheet">
 
     <!-- 반응형 (항상 마지막) -->
     <link href="css/responsive.css" rel="stylesheet">
 </head>
 
 <body class="page-popup">
-    <div id="section_main">
+    <div class="section">
         <div id="section_main_area1">
-            <div>
-                <img src="image/HGU_logo.png">
-                <span id="span1"><br><br>한캠사에 오신 것을 환영합니다!</span>
-                <br><br><span id="span2">사이트에 대한 소개가 궁금하다면 아래의 버튼을 눌러주세요!</span>
-                <span></span>
-            </div>
+            <img src="image/HGU_logo.webp" alt="한동대학교">
+            <p id="span1">한캠사에 오신 것을 환영합니다!</p>
+            <p id="span2">사이트에 대한 소개가 궁금하다면 아래의 버튼을 눌러주세요!</p>
         </div>
         <div id="section_main_area2">
-            <br>
-            <div id="button1">
-                <input type="button" value="사이트 소개 보러가기" id="button1" onclick="goMenual()">
-            </div>
+            <button type="button" class="popup-button" onclick="goMenual()">사이트 소개 보러가기</button>
         </div>
     </div>
+
+    <script src="js/popup.js"></script>
 </body>
 
 </html>

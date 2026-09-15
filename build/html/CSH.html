@@ -1,130 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>코너스톤홀 · 한캠사</title>
+    <meta name="description" content="한동대학교에서 가장 아름다운 건물 중 하나인 코너스톤홀은 오석관과 올네이션스홀 사이에 위치하고 있습니다. 이곳은 공간환경시스템공학부가 사용하는 건물로, 206호에 공간환경시스템공학부 사무실이 있습니다. 코너스톤홀 1층에는 예소드라는 카페가 있어 타학부 학생들도 이곳을 ">
+    <link rel="icon" href="../image/HGU_logo.webp">
     <link href="../css/all.css" rel="stylesheet">
-    <!-- font css -->
     <link href="../css/font/font.css" rel="stylesheet">
-    <!-- index css -->
     <link href="../css/Building.css" rel="stylesheet">
     <link href="../css/nav.css" rel="stylesheet">
     <link href="../css/sideMenubar.css" rel="stylesheet">
-
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
 
     <!-- 반응형 (항상 마지막) -->
     <link href="../css/responsive.css" rel="stylesheet">
 </head>
 
+<body class="page-building">
+    <div class="section">
+        <nav id="section_main_sideMenubar" aria-label="구역 바로가기">
+            <ul>
+                <li><a href="#section_3">건물 소개</a></li>
+                <li><a href="#section_2">핫플레이스</a></li>
+            </ul>
+        </nav>
 
-
-
-<body class="page-building" onload="javascript:alert('이곳은 코너스톤홀입니다')">
-
-    <div id="section_main">
-        <div id="section_main_sideMenubar">
-            <table>
-                <tr>
-                    <td><a href="#section_3">사이트 소개</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#section_2">핫플레이스</a></td>
-                </tr>
-                <tr>
-                </tr>
-            </table>
-        </div>
         <div id="section_1">
-
-            <div id="section_main_nav">
+            <nav id="section_main_nav" aria-label="주 메뉴">
                 <div id="section_main_nav_home">
-                    <a href="../index.html" style="text-decoration: none;">
+                    <a href="../index.html">
                         <p>한캠사</p>
                     </a>
-
                 </div>
-
                 <div id="section_main_nav_menu">
-                    <div id="section_main_nav_menu_first">
+                    <div>
                         <a href="../introduce.html">
                             <p>소개</p>
                         </a>
                     </div>
-                    <div id="section_main_nav_menu_seciond">
+                    <div>
                         <a href="../campusMap.html">
                             <p>캠퍼스맵</p>
                         </a>
                     </div>
                 </div>
-            </div>
+            </nav>
+
 
             <div id="section_1_main_BG_Image">
-                <img src="../image/Building/CNSH.jpg">
+                <img src="../image/Building/CNSH.webp" alt="코너스톤홀 전경">
             </div>
-
         </div>
     </div>
-    <div id="section_main">
+
+    <div class="section">
         <div id="section_3">
-            <div id="section_N_main">
+            <div class="panel">
                 <div id="section_3_main_title">
-                    <div id="section_3_main_title_str">코너스톤홀</div>
+                    <h1 id="section_3_main_title_str">코너스톤홀</h1>
                 </div>
                 <div id="section_3_main_info">
-                    <div id="section_3_main_info_str">
-                        : 한동대학교에서 가장 아름다운 건물 중 하나인 코너스톤홀은 오석관과 올네이션스홀 사이에 위치하고 있습니다. 이곳은 공간환경시스템공학부가 사용하는 건물로, 206호에
-                        공간환경시스템공학부 사무실이 있습니다. 코너스톤홀 1층에는 예소드라는 카페가 있어 타학부 학생들도 이곳을 자주 찾습니다.
-                    </div>
+                    <p id="section_3_main_info_str">: 한동대학교에서 가장 아름다운 건물 중 하나인 코너스톤홀은 오석관과 올네이션스홀 사이에 위치하고 있습니다. 이곳은 공간환경시스템공학부가 사용하는 건물로, 206호에 공간환경시스템공학부 사무실이 있습니다. 코너스톤홀 1층에는 예소드라는 카페가 있어 타학부 학생들도 이곳을 자주 찾습니다.</p>
                 </div>
                 <div id="section_3_main_image">
-
-                    <img src="../image/Building/CNSH.jpg">
-
+                    <img src="../image/Building/CNSH.webp" alt="코너스톤홀" loading="lazy">
                 </div>
             </div>
         </div>
     </div>
-    <div id="section_main">
+
+    <div class="section">
         <div id="section_2">
-            <div id="section_N_main">
-                <div id="section_2_main_title">
-                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp핫플레이스
-                </div>
-                <div id="section_2_main_first">
-                    <a href="info/예소드.html">
-                        <div id="section_2_main_first_userImage">
-                            <img src="../image//HotPlace/yesod.jpg">
+            <div class="panel">
+                <h2 id="section_2_main_title">핫플레이스</h2>
+                <div class="card-row">
+                    <a href="info/yesod.html">
+                        <div class="card-photo">
+                            <img src="../image//HotPlace/yesod.webp" alt="예소드" loading="lazy">
                         </div>
                     </a>
-                    <a href="info/공용강의실.html">
-                        <div id="section_2_main_first_userImage">
-                            <img src="../image/update.png">
+                    <a href="info/shared-classroom.html">
+                        <div class="card-photo">
+                            <img src="../image/update.webp" alt="공용 강의실" loading="lazy">
                         </div>
                     </a>
                 </div>
-                <div id="section_2_main_second">
-                    <a href="info/예소드.html">
-                        <div id="section_2_main_second_userInfo">
-                            <span>예소드</span>
-                        </div>
+                <div class="label-row">
+                    <a href="info/yesod.html">
+                        <div class="card-label"><span>예소드</span></div>
                     </a>
-                    <a href="info/공용강의실.html">
-                        <div id="section_2_main_second_userInfo">
-                            <span>공용 강의실</span>
-                        </div>
+                    <a href="info/shared-classroom.html">
+                        <div class="card-label"><span>공용 강의실</span></div>
                     </a>
-
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="../js/JS.js"></script>
+
 </body>
 
 </html>

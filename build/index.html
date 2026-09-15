@@ -1,95 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 
-    <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/all.css" rel="stylesheet">
-        <!-- font css -->
-        <link href="css/font/font.css" rel="stylesheet">
-        <!-- nav 영역 css -->
-        <link href="css/nav.css" rel="stylesheet">
-        <!-- index css -->
-        <link href="css/index.css" rel="stylesheet">
+    <title>한캠사 · 한동대학교 캠퍼스 소개 사이트</title>
+    <meta name="description" content="한동대학교의 건물과 캠퍼스 곳곳을 소개하는 사이트입니다.">
+    <link rel="icon" href="image/HGU_logo.webp">
+    <link href="css/all.css" rel="stylesheet">
+    <link href="css/font/font.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/nav.css" rel="stylesheet">
 
-        <link
-            rel="stylesheet"
-            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script
-            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-        <script src="js/popup.js"></script>
-    
     <!-- 반응형 (항상 마지막) -->
     <link href="css/responsive.css" rel="stylesheet">
 </head>
 
-    <body class="page-home" onload="showPopup()">
-
-        <div id="section_main">
-            <div
-                class="container"
-                style="width: 100%; height: 100%; margin: 0; padding: 0; z-index: 5;">
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-                    <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" class=""></li>
-                        <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-                        <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
-                    </ol>
-
-                    <div class="carousel-inner">
-                        <div class="item">
-                            <img
-                                src="image/main1.jpg"
-                                alt="Los Angeles">
-                        </div>
-
-                        <div class="item">
-                            <img src="image/main2.jpg" alt=" Chicago ">
-                        </div>
-
-                        <div class="item active">
-                            <img
-                                src="image/main3.jpg"
-                                alt="New york ">
-                        </div>
-                    </div>
-
-                </div>
+<body class="page-home">
+    <div class="section">
+        <div class="carousel" id="carousel">
+            <figure class="carousel__slide">
+                <img src="image/main1.webp" alt="한동대학교 캠퍼스 전경">
+            </figure>
+            <figure class="carousel__slide">
+                <img src="image/main2.webp" alt="한동대학교 캠퍼스 풍경">
+            </figure>
+            <figure class="carousel__slide">
+                <img src="image/main3.webp" alt="한동대학교 캠퍼스 잔디밭">
+            </figure>
+            <div class="carousel__dots" role="tablist" aria-label="배경 사진 전환">
+                <button type="button" class="carousel__dot" data-index="0" aria-label="1번째 사진"></button>
+                <button type="button" class="carousel__dot" data-index="1" aria-label="2번째 사진"></button>
+                <button type="button" class="carousel__dot" data-index="2" aria-label="3번째 사진"></button>
             </div>
+        </div>
 
-            <div id="section_main_nav">
+            <nav id="section_main_nav" aria-label="주 메뉴">
                 <div id="section_main_nav_home">
-                    <a href="index.html" style="text-decoration: none;">
+                    <a href="index.html">
                         <p>한캠사</p>
                     </a>
-
                 </div>
-
                 <div id="section_main_nav_menu">
-                    <div id="section_main_nav_menu_first">
+                    <div>
                         <a href="introduce.html">
                             <p>소개</p>
                         </a>
                     </div>
-                    <div id="section_main_nav_menu_seciond">
+                    <div>
                         <a href="campusMap.html">
                             <p>캠퍼스맵</p>
                         </a>
                     </div>
                 </div>
-            </div>
+            </nav>
 
-            <div id="section_main_welcomeTextBox">
-                <b>
-                    <p>한캠사에 오신 것을<br>진심으로 환영합니다</p>
-                </b>
-            </div>
+
+        <div id="section_main_welcomeTextBox">
+            <h1><b>한캠사에 오신 것을<br>진심으로 환영합니다</b></h1>
         </div>
+    </div>
 
-    </body>
+    <script src="js/carousel.js"></script>
+    <script src="js/popup.js"></script>
+</body>
 
 </html>

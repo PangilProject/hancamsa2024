@@ -1,0 +1,15 @@
+{
+  "title": "한캠사",
+  "tagline": "한동대학교 캠퍼스 소개 사이트",
+  "lang": "ko",
+  "nav": [
+    {
+      "label": "소개",
+      "href": "introduce.html"
+    },
+    {
+      "label": "캠퍼스맵",
+      "href": "campusMap.html"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+        <nav id="section_main_sideMenubar" aria-label="구역 바로가기">
+            <ul>
+{% for item in sidemenu %}                <li><a href="{{ item.href }}">{{ item.label }}</a></li>
+{% endfor %}            </ul>
+        </nav>

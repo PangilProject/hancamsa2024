@@ -1,0 +1,23 @@
+    <div class="section">
+        <div id="section_1">
+{% include "_nav.html" %}
+
+            <div class="panel">
+                <div id="section_main_imageMap">
+                    <p class="typing-txt">{{ prompt }}</p>
+                    <p class="typing" aria-hidden="true">&nbsp;&nbsp;:&nbsp;</p>
+
+                    <img src="{{ base }}image/mainMap.webp" id="imageMap" usemap="#imgMap"
+                        alt="한동대학교 캠퍼스 지도" data-map-basew="1036.8" data-map-baseh="520">
+                    <map name="imgMap">
+{% for a in areas %}                        <area shape="{{ a.shape }}" coords="{{ a.coords }}" href="html/{{ a.target }}.html" alt="{{ a.name }}" title="{{ a.name }}">
+{% endfor %}                    </map>
+
+                    <!-- 좁은 화면에서는 이미지맵 대신 이 목록이 보인다 -->
+                    <nav id="buildingList" aria-label="건물 목록">
+{% for a in areas %}                        <a href="html/{{ a.target }}.html">{{ a.name }}</a>
+{% endfor %}                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>

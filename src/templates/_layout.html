@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
+    <link rel="icon" href="{{ base }}image/HGU_logo.webp">
+    <link href="{{ base }}css/all.css" rel="stylesheet">
+    <link href="{{ base }}css/font/font.css" rel="stylesheet">
+{% for css in styles %}    <link href="{{ css }}" rel="stylesheet">
+{% endfor %}
+    <!-- 반응형 (항상 마지막) -->
+    <link href="{{ base }}css/responsive.css" rel="stylesheet">
+</head>
+
+<body class="{{ body_class }}">
+{{& content }}
+{% for js in scripts %}    <script src="{{ js }}"></script>
+{% endfor %}</body>
+
+</html>

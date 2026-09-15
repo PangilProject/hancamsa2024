@@ -1,115 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>캠퍼스맵 · 한캠사</title>
+    <meta name="description" content="한동대학교 캠퍼스 지도에서 건물을 골라 자세히 살펴보세요.">
+    <link rel="icon" href="image/HGU_logo.webp">
     <link href="css/all.css" rel="stylesheet">
-    <!-- font css -->
     <link href="css/font/font.css" rel="stylesheet">
-    <!-- index css -->
     <link href="css/campusMap.css" rel="stylesheet">
     <link href="css/nav.css" rel="stylesheet">
-
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
     <!-- 반응형 (항상 마지막) -->
     <link href="css/responsive.css" rel="stylesheet">
 </head>
 
-
-
-
 <body class="page-map">
-
-    <div id="section_main">
+    <div class="section">
         <div id="section_1">
-            <div id="section_N_main">
-                <div id="section_main_nav">
-                    <div id="section_main_nav_home">
-                        <a href="index.html" style="text-decoration: none;">
-                            <p>한캠사</p>
+            <nav id="section_main_nav" aria-label="주 메뉴">
+                <div id="section_main_nav_home">
+                    <a href="index.html">
+                        <p>한캠사</p>
+                    </a>
+                </div>
+                <div id="section_main_nav_menu">
+                    <div>
+                        <a href="introduce.html">
+                            <p>소개</p>
                         </a>
-
                     </div>
-
-                    <div id="section_main_nav_menu">
-                        <div id="section_main_nav_menu_first">
-                            <a href="introduce.html">
-                                <p>소개</p>
-                            </a>
-                        </div>
-                        <div id="section_main_nav_menu_seciond">
-                            <a href="campusMap.html">
-                                <p>캠퍼스맵</p>
-                            </a>
-                        </div>
+                    <div>
+                        <a href="campusMap.html">
+                            <p>캠퍼스맵</p>
+                        </a>
                     </div>
                 </div>
+            </nav>
 
+
+            <div class="panel">
                 <div id="section_main_imageMap">
-                    <br>
                     <p class="typing-txt">건물을 선택해보세요!</p>
-                    <p class="typing">&nbsp&nbsp: </p>
-                    <img src="image/mainMap.png" id="imageMap" usemap="#imgMap"
-                        alt="한동대학교 캠퍼스맵" data-map-basew="1036.8" data-map-baseh="520">
+                    <p class="typing" aria-hidden="true">&nbsp;&nbsp;:&nbsp;</p>
+
+                    <img src="image/mainMap.webp" id="imageMap" usemap="#imgMap"
+                        alt="한동대학교 캠퍼스 지도" data-map-basew="1036.8" data-map-baseh="520">
                     <map name="imgMap">
-                        <area shape="poly" id="HDH" name="현동홀" coords="370 130 530 130 530 225 495 225 495 165 370 165"
-                            href="javascript:check('HDH.html', '현동홀')" onfocus="this.blur()">
-                        <!-- href="html/HDH.html" onfocus="this.blur()"> -->
-
-                        <area shape="poly" name="느헤미야홀" coords="180 225 305 225 305 160 340 160 340 255 180 255"
-                            href="javascript:check('NMH.html', '느헤미야홀')" onfocus="this.blur()">
-
-                        <area shape="rect" name="뉴턴홀" coords="175 310 330 330"
-                            href="javascript:check('NTH.html', '뉴턴홀')" onfocus="this.blur()">
-
-                        <area shape="poly" name="올네이션스홀" coords="180 330 210 330 210 410 225 410 225 445 180 445 "
-                            href="javascript:check('ANH.html', '올네이션스홀')" onfocus="this.blur()">
-
-                        <area shape="rect" name="코너스톤홀" coords="235 410 280 445"
-                            href="javascript:check('CSH.html', '코너스톤홀')" onfocus="this.blur()">
-
-                        <area shape="rect" name="오석관" coords="285 355 330 450" href="javascript:check('OH.html', '오석관')"
-                            onfocus="this.blur()">
-
-                        <area shape="poly" name="학관"
-                            coords="570 340 710 340 710 405 685 405 685 430 598 430 598 405 570 405"
-                            href="javascript:check('SU.html', '학관')" onfocus="this.blur()">
-
-                        <area shape="poly" name="복지동" coords="740 350 820 350 820 370 760 370 760 390 740 390"
-                            href="javascript:check('BockJi.html', '복지동')" onfocus="this.blur()">
-
-                        <area shape="rect" name="언어교육원" coords="515 20 570 40"
-                            href="javascript:check('GLC.html', '언어교육원')" onfocus="this.blur()">
-                        <area shape="rect" name="채플" coords="610 15 725 35" href="javascript:check('HCA.html', '채플')"
-                            onfocus="this.blur()">
-                        <area shape="rect" name="에벤에셀" coords="835 145 950 165"
-                            href="javascript:check('EBEN.html', '에벤에셀')" onfocus="this.blur()">
-
+                        <area shape="poly" coords="370 130 530 130 530 225 495 225 495 165 370 165" href="html/HDH.html" alt="현동홀" title="현동홀">
+                        <area shape="poly" coords="180 225 305 225 305 160 340 160 340 255 180 255" href="html/NMH.html" alt="느헤미야홀" title="느헤미야홀">
+                        <area shape="rect" coords="175 310 330 330" href="html/NTH.html" alt="뉴턴홀" title="뉴턴홀">
+                        <area shape="poly" coords="180 330 210 330 210 410 225 410 225 445 180 445" href="html/ANH.html" alt="올네이션스홀" title="올네이션스홀">
+                        <area shape="rect" coords="235 410 280 445" href="html/CSH.html" alt="코너스톤홀" title="코너스톤홀">
+                        <area shape="rect" coords="285 355 330 450" href="html/OH.html" alt="오석관" title="오석관">
+                        <area shape="poly" coords="570 340 710 340 710 405 685 405 685 430 598 430 598 405 570 405" href="html/SU.html" alt="학관" title="학관">
+                        <area shape="poly" coords="740 350 820 350 820 370 760 370 760 390 740 390" href="html/BockJi.html" alt="복지동" title="복지동">
+                        <area shape="rect" coords="515 20 570 40" href="html/GLC.html" alt="언어교육원" title="언어교육원">
+                        <area shape="rect" coords="610 15 725 35" href="html/HCA.html" alt="채플" title="채플">
+                        <area shape="rect" coords="835 145 950 165" href="html/EBEN.html" alt="에벤에셀" title="에벤에셀">
                     </map>
+
                     <!-- 좁은 화면에서는 이미지맵 대신 이 목록이 보인다 -->
-                    <nav id="buildingList">
-                        <a href="./html/HDH.html">현동홀</a>
-                        <a href="./html/NMH.html">느헤미야홀</a>
-                        <a href="./html/NTH.html">뉴턴홀</a>
-                        <a href="./html/ANH.html">올네이션스홀</a>
-                        <a href="./html/CSH.html">코너스톤홀</a>
-                        <a href="./html/OH.html">오석관</a>
-                        <a href="./html/SU.html">학관</a>
-                        <a href="./html/BockJi.html">복지동</a>
-                        <a href="./html/GLC.html">언어교육원</a>
-                        <a href="./html/HCA.html">채플</a>
-                        <a href="./html/EBEN.html">에벤에셀</a>
+                    <nav id="buildingList" aria-label="건물 목록">
+                        <a href="html/HDH.html">현동홀</a>
+                        <a href="html/NMH.html">느헤미야홀</a>
+                        <a href="html/NTH.html">뉴턴홀</a>
+                        <a href="html/ANH.html">올네이션스홀</a>
+                        <a href="html/CSH.html">코너스톤홀</a>
+                        <a href="html/OH.html">오석관</a>
+                        <a href="html/SU.html">학관</a>
+                        <a href="html/BockJi.html">복지동</a>
+                        <a href="html/GLC.html">언어교육원</a>
+                        <a href="html/HCA.html">채플</a>
+                        <a href="html/EBEN.html">에벤에셀</a>
                     </nav>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="js/JS.js"></script>
+
+    <script src="js/typing.js"></script>
     <script src="js/responsive.js"></script>
 </body>
 
