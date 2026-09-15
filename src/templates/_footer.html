@@ -1,0 +1,10 @@
+    <footer class="footer">
+        <div class="footer__inner">
+            <p class="footer__brand">{{ site.title }}</p>
+            <p class="footer__desc">{{ site.tagline }}</p>
+            <nav class="footer__links" aria-label="바닥글 메뉴">
+                <a href="{{ base }}index.html">홈</a>
+{% for item in site.nav %}                <a href="{{ base }}{{ item.href }}">{{ item.label }}</a>
+{% endfor %}            </nav>
+        </div>
+    </footer>

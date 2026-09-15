@@ -1,202 +1,88 @@
-/* 콘텐츠가 뷰포트보다 짧을 때 아래쪽에 흰 띠가 남지 않도록 */
+/* [ 건물 상세 ] 사진 히어로 + 소개 카드 + 핫플레이스 그리드 */
 
-body.page-building,
-body.page-info {
-    background-color: #7DCADD;
-}
-
-#section_1,
-#section_2,
-#section_3 {
-    width: 100%;
-    min-height: var(--section-h);
-    background-color: #7DCADD;
-    position: static;
-}
-
-.panel {
-    width: 80%;
-    max-width: 1200px;
-    min-height: 590px;
-    margin: 0 auto;
-    padding-bottom: 20px;
+.detail-hero {
     position: relative;
-    top: 100px;
-    background-color: #DCEBF1;
-    border-radius: 30px;
+    display: flex;
+    align-items: flex-end;
+    height: 52vh;
+    min-height: 340px;
+    overflow: hidden;
 }
 
-#section_2_main_title {
+.detail-hero > img {
+    position: absolute;
+    inset: 0;
     width: 100%;
-    padding: 18px 5% 8px;
-    /* background-color: orange; */
-    font-size: clamp(24px, 3.2vw, 40px);
+    height: 100%;
+    object-fit: cover;
 }
 
-#section_2_main_title_small {
+.detail-hero__scrim {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, .45) 0%, rgba(0, 0, 0, .15) 40%, rgba(0, 0, 0, .7) 100%);
+}
+
+.detail-hero__content {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 48px;
+}
+
+.detail-hero__eyebrow {
+    color: rgba(255, 255, 255, .8);
     font-size: 15px;
+    font-weight: 600;
 }
 
-.card-row {
-    width: 100%;
-    height: 180px;
-    /* background-color: yellow; */
-    padding: 0 5%;
-    border-radius: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
+.detail-hero__title {
+    margin-top: 6px;
+    color: #fff;
+    font-size: 44px;
+    letter-spacing: -.035em;
 }
 
-.card-row img {
-    filter: blur(0px);
-    transition: filter 1s, width 1s, left 1s, top 1s, bottom 1s, height 1s;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: relative;
-    left: 0%;
-    top: 0%;
-    bottom: 0%;
-    border-radius: 30px;
+.page-building .page {
+    padding-top: 40px;
 }
 
-.card-row img:hover {
-    filter: blur(5px);
-    width: 90%;
-    left: 5%;
-    top: 5%;
-    bottom: 5%;
-    height: 95%
+/* 핫플레이스 카드 */
+
+.place-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
 }
 
-.card-photo {
-    flex: 0 0 23%;
-    min-width: 0;
-    height: 100%;
-    position: relative;
-    background-color: gainsboro;
-    margin: 0 1%;
-    border-radius: 30px;
-}
-
-.card-photo img {
-    width: 100%;
-    height: 100%;
-    /* 학부 로고처럼 글자가 들어간 이미지는 잘리면 안 되므로 원본대로 채운다 */
-    object-fit: fill;
-    border-radius: 30px;
-}
-
-.label-row {
-    width: 100%;
-    padding-top: 10px;
-    /* background-color: brown; */
-    padding: 0 5%;
-    border-radius: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-}
-
-.card-label {
-    flex: 0 0 23%;
-    min-width: 0;
-    min-height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 6px 8px;
-    position: relative;
-    background-color: #F7E59D;
-    margin: 0 1%;
-    font-size: clamp(10px, 1vw, 13px);
-    text-align: center;
-    border-radius: 15px;
-}
-
-.card-label span {
-    font-size: 150%;
-    line-height: 1.6;
-}
-
-.card-label:hover {
-    background-color: #E89EBA;
-}
-
-/* 링크로 감싸진 핫플레이스 카드가 flex 아이템이 되는 경우도 동일하게 취급 */
-
-.card-row > a,
-.label-row > a {
-    flex: 0 0 25%;
-    min-width: 0;
+.place-card {
     display: block;
+    background-color: var(--surface);
+    border-radius: var(--r-lg);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    transition: transform .18s ease, box-shadow .18s ease;
 }
 
-.card-row > a > .card-photo,
-.label-row > a > .card-label {
-    flex: none;
-    width: 92%;
-    margin: 0 auto;
+.place-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
-/* 내부가 float 라 부모가 접히지 않도록 */
-
-.panel::after {
-    content: "";
-    display: block;
-    clear: both;
+.place-card__media {
+    aspect-ratio: 4 / 3;
+    background-color: var(--surface-sunken);
 }
 
-#section_1_main_BG_Image {
-    width: 100%;
-    height: var(--section-h);
-    min-height: 420px;
-}
-
-#section_1_main_BG_Image img {
+.place-card__media img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* filter: blur(5px); */
 }
 
-#section_3_main_title {
-    width: 100%;
-    height: 100px;
-    /* background-color: gold; */
-    padding-left: 2%;
-}
-
-#section_3_main_info {
-    width: 40%;
-    min-height: 490px;
-    /* background-color: goldenrod; */
-    float: left;
-    padding: 2%;
-}
-
-#section_3_main_image {
-    width: 60%;
-    height: 490px;
-    /* background-color: greenyellow; */
-    float: right;
-    padding: 2%;
-}
-
-#section_3_main_title_str {
-    font-size: clamp(30px, 4.5vw, 50px);
-    line-height: 100px;
-}
-
-#section_3_main_info_str {
-    font-size: clamp(13px, 1.3vw, 15px);
-    line-height: 2.2;
-}
-
-#section_3_main_image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 30px;
+.place-card__label {
+    padding: 14px 16px 16px;
+    color: var(--text-strong);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -.02em;
 }

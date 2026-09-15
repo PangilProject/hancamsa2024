@@ -6,134 +6,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>현동홀 · 한캠사</title>
     <meta name="description" content="현동홀은 한동대학교 하면 가장 먼저 떠오르는 건물로 평봉필드와 로맨틱잔디 사이에 위치하고 있습니다. 현동홀에는 학교 운영과 학생 지원을 위한 다양한 부서들이 존재합니다. 특히 1층에는 학생지원팀, 교무팀, 대외협력팀 등이 위치해 있습니다. 이곳은 주로 국제어문학부, 상">
+    <meta name="theme-color" content="#ffffff">
     <link rel="icon" href="../image/HGU_logo.webp">
-    <link href="../css/all.css" rel="stylesheet">
-    <link href="../css/font/font.css" rel="stylesheet">
-    <link href="../css/Building.css" rel="stylesheet">
-    <link href="../css/nav.css" rel="stylesheet">
-    <link href="../css/sideMenubar.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+
+    <link href="../css/base.css" rel="stylesheet">
+    <link href="../css/building.css" rel="stylesheet">
 
     <!-- 반응형 (항상 마지막) -->
     <link href="../css/responsive.css" rel="stylesheet">
 </head>
 
 <body class="page-building">
-    <div class="section">
-        <nav id="section_main_sideMenubar" aria-label="구역 바로가기">
-            <ul>
-                <li><a href="#section_3">건물 소개</a></li>
-                <li><a href="#section_2">핫플레이스</a></li>
-            </ul>
+    <header class="nav">
+        <div class="nav__inner">
+            <a class="nav__logo" href="../index.html">한캠사</a>
+            <nav class="nav__menu" aria-label="주 메뉴">
+                <a href="../introduce.html">소개</a>
+                <a href="../campusMap.html">캠퍼스맵</a>
+            </nav>
+        </div>
+    </header>
+
+    <header class="detail-hero">
+        <img src="../image/Building/HDH.webp" alt="현동홀 전경">
+        <div class="detail-hero__scrim"></div>
+        <div class="detail-hero__content container">
+            <p class="detail-hero__eyebrow">건물 소개</p>
+            <h1 class="detail-hero__title">현동홀</h1>
+        </div>
+    </header>
+
+    <main class="page">
+        <div class="container">
+        <nav class="tabs" aria-label="구역 바로가기">
+            <a href="#section_3">건물 소개</a>
+            <a href="#section_2">핫플레이스</a>
         </nav>
 
-        <div id="section_1">
-            <nav id="section_main_nav" aria-label="주 메뉴">
-                <div id="section_main_nav_home">
-                    <a href="../index.html">
-                        <p>한캠사</p>
-                    </a>
-                </div>
-                <div id="section_main_nav_menu">
-                    <div>
-                        <a href="../introduce.html">
-                            <p>소개</p>
-                        </a>
+
+            <section class="section" id="section_3">
+                <div class="card split">
+                    <div class="split__text">
+                        <h2 class="section-title">이곳은 어떤 곳인가요?</h2>
+                        <p class="body-text">현동홀은 한동대학교 하면 가장 먼저 떠오르는 건물로 평봉필드와 로맨틱잔디 사이에 위치하고 있습니다. 현동홀에는 학교 운영과 학생 지원을 위한 다양한 부서들이 존재합니다. 특히 1층에는 학생지원팀, 교무팀, 대외협력팀 등이 위치해 있습니다. 이곳은 주로 국제어문학부, 상담심리사회복지학부, 글로벌리더십학부가 사용하고 있습니다. 322B호에는 국제어문학부 사무실, 311A호에는 상담심리사회복지학부 사무실, 그리고 420호에는 글로벌리더십학부 사무실이 있습니다.</p>
                     </div>
-                    <div>
-                        <a href="../campusMap.html">
-                            <p>캠퍼스맵</p>
-                        </a>
+                    <div class="split__media">
+                        <img src="../image/Building/HDH.webp" alt="현동홀" loading="lazy">
                     </div>
                 </div>
-            </nav>
+            </section>
 
-
-            <div id="section_1_main_BG_Image">
-                <img src="../image/Building/HDH.webp" alt="현동홀 전경">
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <div id="section_3">
-            <div class="panel">
-                <div id="section_3_main_title">
-                    <h1 id="section_3_main_title_str">현동홀</h1>
-                </div>
-                <div id="section_3_main_info">
-                    <p id="section_3_main_info_str">: 현동홀은 한동대학교 하면 가장 먼저 떠오르는 건물로 평봉필드와 로맨틱잔디 사이에 위치하고 있습니다. 현동홀에는 학교 운영과 학생 지원을 위한 다양한 부서들이 존재합니다. 특히 1층에는 학생지원팀, 교무팀, 대외협력팀 등이 위치해 있습니다. 이곳은 주로 국제어문학부, 상담심리사회복지학부, 글로벌리더십학부가 사용하고 있습니다. 322B호에는 국제어문학부 사무실, 311A호에는 상담심리사회복지학부 사무실, 그리고 420호에는 글로벌리더십학부 사무실이 있습니다.</p>
-                </div>
-                <div id="section_3_main_image">
-                    <img src="../image/Building/HDH.webp" alt="현동홀" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <div id="section_2">
-            <div class="panel">
-                <h2 id="section_2_main_title">핫플레이스</h2>
-                <div class="card-row">
-                    <a href="info/student-support.html">
-                        <div class="card-photo">
+            <section class="section" id="section_2">
+                <h2 class="section-title">핫플레이스</h2>
+                <p class="section-desc">현동홀 안에서 꼭 가볼 만한 곳이에요.</p>
+                <div class="place-grid">
+                    <a class="place-card" href="info/student-support.html">
+                        <div class="place-card__media">
                             <img src="../image//HotPlace/hacksaengjiwonteam.webp" alt="학생지원팀" loading="lazy">
                         </div>
+                        <p class="place-card__label">학생지원팀</p>
                     </a>
-                    <a href="info/atm.html">
-                        <div class="card-photo">
+                    <a class="place-card" href="info/atm.html">
+                        <div class="place-card__media">
                             <img src="../image//HotPlace/ATM.webp" alt="ATM" loading="lazy">
                         </div>
+                        <p class="place-card__label">ATM</p>
                     </a>
-                    <a href="info/document-atm.html">
-                        <div class="card-photo">
+                    <a class="place-card" href="info/document-atm.html">
+                        <div class="place-card__media">
                             <img src="../image//HotPlace/HTATM.webp" alt="서류ATM" loading="lazy">
                         </div>
+                        <p class="place-card__label">서류ATM</p>
                     </a>
-                    <a href="info/gls-office.html">
-                        <div class="card-photo">
+                    <a class="place-card" href="info/gls-office.html">
+                        <div class="place-card__media">
                             <img src="../image/major/GLS.webp" alt="GLS학부 사무실" loading="lazy">
                         </div>
+                        <p class="place-card__label">GLS학부 사무실</p>
                     </a>
-                </div>
-                <div class="label-row">
-                    <a href="info/student-support.html">
-                        <div class="card-label"><span>학생지원팀</span></div>
-                    </a>
-                    <a href="info/atm.html">
-                        <div class="card-label"><span>ATM</span></div>
-                    </a>
-                    <a href="info/document-atm.html">
-                        <div class="card-label"><span>서류ATM</span></div>
-                    </a>
-                    <a href="info/gls-office.html">
-                        <div class="card-label"><span>GLS학부 사무실</span></div>
-                    </a>
-                </div>
-                <div class="card-row">
-                    <a href="info/intl-languages-office.html">
-                        <div class="card-photo">
+                    <a class="place-card" href="info/intl-languages-office.html">
+                        <div class="place-card__media">
                             <img src="../image/major/GookU.webp" alt="국제어문학부 사무실" loading="lazy">
                         </div>
+                        <p class="place-card__label">국제어문학부 사무실</p>
                     </a>
-                    <a href="info/counseling-welfare-office.html">
-                        <div class="card-photo">
+                    <a class="place-card" href="info/counseling-welfare-office.html">
+                        <div class="place-card__media">
                             <img src="../image/major/sangsa.webp" alt="상담심리사회복지학부 사무실" loading="lazy">
                         </div>
+                        <p class="place-card__label">상담심리사회복지학부 사무실</p>
                     </a>
                 </div>
-                <div class="label-row">
-                    <a href="info/intl-languages-office.html">
-                        <div class="card-label"><span>국제어문학부 사무실</span></div>
-                    </a>
-                    <a href="info/counseling-welfare-office.html">
-                        <div class="card-label"><span>상담심리사회복지학부 사무실</span></div>
-                    </a>
-                </div>
-            </div>
+            </section>
         </div>
-    </div>
+    </main>
 
+    <footer class="footer">
+        <div class="footer__inner">
+            <p class="footer__brand">한캠사</p>
+            <p class="footer__desc">한동대학교 캠퍼스 소개 사이트</p>
+            <nav class="footer__links" aria-label="바닥글 메뉴">
+                <a href="../index.html">홈</a>
+                <a href="../introduce.html">소개</a>
+                <a href="../campusMap.html">캠퍼스맵</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="../js/nav.js"></script>
 </body>
 
 </html>

@@ -1,72 +1,34 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* [ 첫 방문 안내 팝업 ] */
 
-body {
-    background-color: #7DCADD;
-}
-
-.section {
-    width: 100%;
-    max-width: 500px;
+.popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     min-height: 100vh;
-    background-color: #7DCADD;
-    margin: 0 auto;
-    padding: 50px 50px 0;
-    position: static;
+    padding: 24px;
 }
 
-#section_main_area1 {
-    width: 100%;
-    padding: 20px;
-    background-color: #DCEBF1;
-    text-align: center;
-    border-radius: 20px;
-}
-
-#section_main_area2 {
-    width: 100%;
-    margin-top: 40px;
-    padding: 10px;
-    background-color: #1B8BB8;
-    border-radius: 20px;
-}
-
-#section_main_area1 img {
+.popup__card {
     width: 100%;
     max-width: 380px;
-    height: auto;
-    border-radius: 20px;
+    padding: 36px 28px 28px;
+    border-radius: var(--r-xl);
+    background-color: var(--surface);
+    box-shadow: var(--shadow-md);
+    text-align: center;
 }
 
-#section_main_area1 p + p {
-    margin-top: 16px;
+.popup__logo {
+    width: 160px;
+    margin: 0 auto 24px;
 }
 
-#span1 {
-    font-size: clamp(18px, 5vw, 25px);
+.popup__title {
+    font-size: 24px;
 }
 
-#span2 {
-    font-size: 14px;
-}
-
-.popup-button {
-    width: 100%;
-    max-width: 220px;
-    height: 40px;
-    margin: 0 auto;
-    display: block;
-    border: 0;
-    border-radius: 5px;
-    background-color: #DCEBF1;
-    font-family: inherit;
+.popup__desc {
+    margin: 12px 0 28px;
+    color: var(--text-sub);
     font-size: 15px;
-    cursor: pointer;
-}
-
-.popup-button:hover {
-    background-color: #7DCADD;
 }

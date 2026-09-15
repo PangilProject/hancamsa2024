@@ -1,46 +1,39 @@
-    <div class="section">
-{% include "_sidemenu.html" %}
-        <div id="section_1">
-{% include "_nav.html" %}
-
-            <div id="section_1_main_BG_Image">
-                <img src="{{ base }}{{ b.bg }}" alt="{{ b.name }} 전경">
-            </div>
+    <header class="detail-hero">
+        <img src="{{ base }}{{ b.bg }}" alt="{{ b.name }} 전경">
+        <div class="detail-hero__scrim"></div>
+        <div class="detail-hero__content container">
+            <p class="detail-hero__eyebrow">건물 소개</p>
+            <h1 class="detail-hero__title">{{ b.name }}</h1>
         </div>
-    </div>
+    </header>
 
-    <div class="section">
-        <div id="section_3">
-            <div class="panel">
-                <div id="section_3_main_title">
-                    <h1 id="section_3_main_title_str">{{ b.name }}</h1>
-                </div>
-                <div id="section_3_main_info">
-                    <p id="section_3_main_info_str">{{ b.desc }}</p>
-                </div>
-                <div id="section_3_main_image">
-                    <img src="{{ base }}{{ b.photo }}" alt="{{ b.name }}" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </div>
+    <main class="page">
+        <div class="container">
+{% include "_tabs.html" %}
 
-    <div class="section">
-        <div id="section_2">
-            <div class="panel">
-                <h2 id="section_2_main_title">핫플레이스</h2>
-{% for row in rows %}                <div class="card-row">
-{% for c in row %}                    <a href="info/{{ c.slug }}.html">
-                        <div class="card-photo">
+            <section class="section" id="section_3">
+                <div class="card split">
+                    <div class="split__text">
+                        <h2 class="section-title">이곳은 어떤 곳인가요?</h2>
+                        <p class="body-text">{{ b.desc }}</p>
+                    </div>
+                    <div class="split__media">
+                        <img src="{{ base }}{{ b.photo }}" alt="{{ b.name }}" loading="lazy">
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="section_2">
+                <h2 class="section-title">핫플레이스</h2>
+                <p class="section-desc">{{ b.name }} 안에서 꼭 가볼 만한 곳이에요.</p>
+                <div class="place-grid">
+{% for c in b.hotplaces %}                    <a class="place-card" href="info/{{ c.slug }}.html">
+                        <div class="place-card__media">
                             <img src="{{ base }}{{ c.image }}" alt="{{ c.label }}" loading="lazy">
                         </div>
+                        <p class="place-card__label">{{ c.label }}</p>
                     </a>
 {% endfor %}                </div>
-                <div class="label-row">
-{% for c in row %}                    <a href="info/{{ c.slug }}.html">
-                        <div class="card-label"><span>{{ c.label }}</span></div>
-                    </a>
-{% endfor %}                </div>
-{% endfor %}            </div>
+            </section>
         </div>
-    </div>
+    </main>

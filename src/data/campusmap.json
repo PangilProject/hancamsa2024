@@ -1,71 +1,103 @@
 {
+  "prompt": "건물을 선택해보세요!",
+  "coord_space": {
+    "w": 1036.8,
+    "h": 520,
+    "note": "usemap 시절 이미지를 늘려 그리던 크기. areas 의 coords 는 이 공간 기준이다. label_dx/label_dy 는 투영 후 화면 좌표에서 이름표를 옮기는 보정값이다."
+  },
+  "image": {
+    "src": "image/mainMap.webp",
+    "w": 1550,
+    "h": 910
+  },
   "areas": [
     {
       "shape": "poly",
       "name": "현동홀",
       "coords": "370 130 530 130 530 225 495 225 495 165 370 165",
-      "target": "HDH"
+      "target": "HDH",
+      "label_dx": 0,
+      "label_dy": 0
     },
     {
       "shape": "poly",
       "name": "느헤미야홀",
       "coords": "180 225 305 225 305 160 340 160 340 255 180 255",
-      "target": "NMH"
+      "target": "NMH",
+      "label_dx": 0,
+      "label_dy": 0
     },
     {
       "shape": "rect",
       "name": "뉴턴홀",
       "coords": "175 310 330 330",
-      "target": "NTH"
+      "target": "NTH",
+      "label_dx": 0,
+      "label_dy": 0
     },
     {
       "shape": "poly",
       "name": "올네이션스홀",
       "coords": "180 330 210 330 210 410 225 410 225 445 180 445",
-      "target": "ANH"
+      "target": "ANH",
+      "label_dx": -12,
+      "label_dy": -16
     },
     {
       "shape": "rect",
       "name": "코너스톤홀",
       "coords": "235 410 280 445",
-      "target": "CSH"
+      "target": "CSH",
+      "label_dx": 6,
+      "label_dy": 16
     },
     {
       "shape": "rect",
       "name": "오석관",
       "coords": "285 355 330 450",
-      "target": "OH"
+      "target": "OH",
+      "label_dx": 10,
+      "label_dy": -4
     },
     {
       "shape": "poly",
       "name": "학관",
       "coords": "570 340 710 340 710 405 685 405 685 430 598 430 598 405 570 405",
-      "target": "SU"
+      "target": "SU",
+      "label_dx": 0,
+      "label_dy": 0
     },
     {
       "shape": "poly",
       "name": "복지동",
       "coords": "740 350 820 350 820 370 760 370 760 390 740 390",
-      "target": "BockJi"
+      "target": "BockJi",
+      "label_dx": 0,
+      "label_dy": 0
     },
     {
       "shape": "rect",
       "name": "언어교육원",
       "coords": "515 20 570 40",
-      "target": "GLC"
+      "target": "GLC",
+      "label_dx": 0,
+      "label_dy": 0
     },
     {
       "shape": "rect",
       "name": "채플",
       "coords": "610 15 725 35",
-      "target": "HCA"
+      "target": "HCA",
+      "label_dx": 0,
+      "label_dy": 0
     },
     {
       "shape": "rect",
       "name": "에벤에셀",
       "coords": "835 145 950 165",
-      "target": "EBEN"
+      "target": "EBEN",
+      "label_dx": 0,
+      "label_dy": 0
     }
-  ],
-  "prompt": "건물을 선택해보세요!"
+  ]
 }

@@ -1,227 +1,85 @@
-body.page-introduce {
-    background-color: #1B8BB8;
-}
+/* [ 소개 ] */
 
-#section_1,
-#section_2,
-#section_3 {
-    width: 100%;
-    min-height: var(--section-h);
-    background-color: #1B8BB8;
-    position: static;
-}
-
-.panel {
-    width: 80%;
-    max-width: 1200px;
-    min-height: 590px;
-    margin: 0 auto;
-    padding-bottom: 20px;
+.timeline li {
     position: relative;
-    top: 100px;
-    background-color: #DCEBF1;
-    border-radius: 30px;
+    padding: 12px 0 12px 20px;
+    color: var(--text);
+    font-size: 15px;
 }
 
-/* 내부가 float 라 부모가 접히지 않도록 */
+.timeline li + li {
+    border-top: 1px solid var(--line);
+}
 
-.panel::after {
+.timeline li::before {
     content: "";
-    display: block;
-    clear: both;
+    position: absolute;
+    left: 0;
+    top: 21px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--blue);
 }
 
-#text1 {
-    float: left;
-    width: 30%;
-    padding: 8px;
-    padding-left: 20px;
-    /* background-color: lightpink; */
+/* 개발자 카드 */
+
+.people-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
 }
 
-#text1 #text1_h3 {
-    color: #DCEBF1;
-    transition: font-size 1s, color 1s;
-    font-size: 1px;
-    /* span(50px) 이 1px 줄상자를 넘쳐 다른 요소를 덮지 않도록 줄 높이를 확보 */
-    line-height: 60px;
-}
-
-#text1 #text1_h3:hover,
-#text1 #text1_h3:focus,
-#text1 #text1_h3:focus-visible {
-    font-size: 30px;
-    color: #1B8BB8;
-}
-
-/*
-h3 자체는 배경과 같은 색으로 숨겨 두고 hover/focus 때 드러낸다.
-첫 글자(한/캠/사)만 항상 보여야 하므로 색을 따로 지정한다.
-(예전에는 전역 * { color: black } 에 의존하고 있었다)
-*/
-
-#text1 #text1_h3 span {
-    font-size: 50px;
-    color: black;
-}
-
-.typing-txt {
-    font-size: 15px !important;
-}
-
-.typing {
-    font-size: 15px !important;
-}
-
-#section_2_main_title {
-    width: 100%;
-    padding: 18px 5% 8px;
-    /* background-color: orange; */
-    font-size: clamp(24px, 3.2vw, 40px);
-}
-
-.card-row {
-    width: 100%;
-    height: 320px;
-    /* background-color: yellow; */
-    padding: 0 5%;
+.person {
     display: flex;
-    align-items: stretch;
-    gap: 2%;
+    flex-direction: column;
+    background-color: var(--surface);
+    border-radius: var(--r-xl);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
 }
 
-.card-photo {
-    flex: 1 1 0;
-    min-width: 0;
-    height: 100%;
-    position: relative;
-    background-color: #F7E59D;
-    border-radius: 30px;
+.person__media {
+    aspect-ratio: 1 / 1;
+    background-color: var(--surface-sunken);
 }
 
-.card-photo img {
+.person__media img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 30px;
 }
 
-.label-row {
-    width: 100%;
-    padding-top: 20px;
-    /* background-color: brown; */
-    padding: 0 5%;
-    display: flex;
-    align-items: stretch;
-    gap: 2%;
-}
-
-.card-label {
-    flex: 1 1 0;
-    min-width: 0;
-    position: relative;
-    background-color: #F7E59D;
-    font-size: clamp(11px, 1vw, 14px);
-    border-radius: 30px;
-    padding: 14px 20px;
-}
-
-.card-label span {
-    font-size: 150%;
-}
-
-#section_1_main_title {
-    width: 70%;
-    min-height: 590px;
-    background-color: grey;
-    float: right;
-    border-radius: 0px 30px 30px 0px;
+.person__body {
     padding: 20px;
 }
 
-#section_1_main_title_first {
-    width: 100%;
-    /* background-color: hotpink; */
-    border-radius: 0px 30px 30px 0px;
+.person__name {
+    font-size: 18px;
 }
 
-#section_1_main_title_first_donggi span {
-    font-size: 20px;
+.person__nick {
+    margin-top: 2px;
+    color: var(--blue);
+    font-size: 14px;
+    font-weight: 600;
 }
 
-#section_1_main_title_first_donggi p {
-    color: gainsboro;
-    line-height: 1.8;
+.person__intro {
+    margin-top: 12px;
+    color: var(--text-sub);
+    font-size: 14px;
+    line-height: 1.7;
 }
 
-#section_1_main_title_first_goal span {
-    font-size: 20px;
+/* 과목 설명 묶음 */
+
+.def + .def {
+    margin-top: 28px;
 }
 
-#section_1_main_title_first_goal ul li {
-    color: gainsboro;
-    list-style: none;
-    margin-bottom: 5px;
-}
-
-#section_1_main_logo {
-    width: 96%;
-    height: 300px;
-}
-
-#section_1_main_logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-#section_3_main {
-    width: 100%;
-    /* background-color: green; */
-    border-radius: 30px;
-    padding: 3%;
-}
-
-#section_3_main_title {
-    width: 100%;
-    /* background-color: honeydew; */
-}
-
-#section_3_main_title span {
-    font-size: clamp(24px, 3.2vw, 40px);
-    line-height: 60px;
-}
-
-#section_3_main_info {
-    width: 100%;
-    /* background-color: indianred; */
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-}
-
-#section_3_main_info_first {
-    flex: 0 0 20%;
-    /* background-color: khaki; */
-    text-align: center;
-    font-size: clamp(14px, 1.6vw, 20px);
-}
-
-#section_3_main_info_first img {
-    width: 100%;
-    height: auto;
-}
-
-#section_3_main_info_second {
-    flex: 1 1 auto;
-    min-width: 0;
-    /* background-color: brown; */
-}
-
-#section_3_main_info_second>b>span {
-    font-size: 20px;
-}
-
-#section_3_main_info_second span {
-    line-height: 1.9;
+.def__title {
+    margin-bottom: 8px;
+    color: var(--blue-hover);
+    font-size: 16px;
 }

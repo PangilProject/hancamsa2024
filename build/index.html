@@ -6,61 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>한캠사 · 한동대학교 캠퍼스 소개 사이트</title>
     <meta name="description" content="한동대학교의 건물과 캠퍼스 곳곳을 소개하는 사이트입니다.">
+    <meta name="theme-color" content="#ffffff">
     <link rel="icon" href="image/HGU_logo.webp">
-    <link href="css/all.css" rel="stylesheet">
-    <link href="css/font/font.css" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">
-    <link href="css/nav.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet">
 
     <!-- 반응형 (항상 마지막) -->
     <link href="css/responsive.css" rel="stylesheet">
 </head>
 
 <body class="page-home">
-    <div class="section">
-        <div class="carousel" id="carousel">
-            <figure class="carousel__slide">
+    <header class="nav">
+        <div class="nav__inner">
+            <a class="nav__logo" href="index.html">한캠사</a>
+            <nav class="nav__menu" aria-label="주 메뉴">
+                <a href="introduce.html">소개</a>
+                <a href="campusMap.html">캠퍼스맵</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero__media" id="carousel">
+            <figure class="hero__slide">
                 <img src="image/main1.webp" alt="한동대학교 캠퍼스 전경">
             </figure>
-            <figure class="carousel__slide">
+            <figure class="hero__slide">
                 <img src="image/main2.webp" alt="한동대학교 캠퍼스 풍경">
             </figure>
-            <figure class="carousel__slide">
+            <figure class="hero__slide">
                 <img src="image/main3.webp" alt="한동대학교 캠퍼스 잔디밭">
             </figure>
-            <div class="carousel__dots" role="tablist" aria-label="배경 사진 전환">
-                <button type="button" class="carousel__dot" data-index="0" aria-label="1번째 사진"></button>
-                <button type="button" class="carousel__dot" data-index="1" aria-label="2번째 사진"></button>
-                <button type="button" class="carousel__dot" data-index="2" aria-label="3번째 사진"></button>
+            <div class="hero__dots" role="tablist" aria-label="배경 사진 전환">
+                <button type="button" class="hero__dot" data-index="0" aria-label="1번째 사진"></button>
+                <button type="button" class="hero__dot" data-index="1" aria-label="2번째 사진"></button>
+                <button type="button" class="hero__dot" data-index="2" aria-label="3번째 사진"></button>
             </div>
         </div>
 
-            <nav id="section_main_nav" aria-label="주 메뉴">
-                <div id="section_main_nav_home">
-                    <a href="index.html">
-                        <p>한캠사</p>
-                    </a>
-                </div>
-                <div id="section_main_nav_menu">
-                    <div>
-                        <a href="introduce.html">
-                            <p>소개</p>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="campusMap.html">
-                            <p>캠퍼스맵</p>
-                        </a>
-                    </div>
-                </div>
-            </nav>
-
-
-        <div id="section_main_welcomeTextBox">
-            <h1><b>한캠사에 오신 것을<br>진심으로 환영합니다</b></h1>
+        <div class="hero__content">
+            <p class="hero__eyebrow">한동대학교 캠퍼스 소개 사이트</p>
+            <h1 class="hero__title">한캠사에 오신 것을<br>진심으로 환영합니다</h1>
+            <div class="hero__actions">
+                <a class="btn btn--primary" href="campusMap.html">캠퍼스맵 보기</a>
+                <a class="btn btn--ghost" href="introduce.html">한캠사 소개</a>
+            </div>
         </div>
-    </div>
+    </section>
 
+    <footer class="footer">
+        <div class="footer__inner">
+            <p class="footer__brand">한캠사</p>
+            <p class="footer__desc">한동대학교 캠퍼스 소개 사이트</p>
+            <nav class="footer__links" aria-label="바닥글 메뉴">
+                <a href="index.html">홈</a>
+                <a href="introduce.html">소개</a>
+                <a href="campusMap.html">캠퍼스맵</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="js/nav.js"></script>
     <script src="js/carousel.js"></script>
     <script src="js/popup.js"></script>
 </body>

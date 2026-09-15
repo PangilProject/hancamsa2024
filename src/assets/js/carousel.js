@@ -1,6 +1,6 @@
 /*
 [ 메인 히어로 캐러셀 ]
-부트스트랩/제이쿼리 없이 동작한다. 슬라이드에 is-active 를 옮겨 붙이는 것이 전부다.
+외부 라이브러리 없이 동작한다. 슬라이드에 is-active 를 옮겨 붙이는 것이 전부다.
 */
 
 (function () {
@@ -12,8 +12,8 @@
         var root = document.getElementById('carousel');
         if (!root) return;
 
-        var slides = root.querySelectorAll('.carousel__slide');
-        var dots = root.querySelectorAll('.carousel__dot');
+        var slides = root.querySelectorAll('.hero__slide');
+        var dots = root.querySelectorAll('.hero__dot');
         if (!slides.length) return;
 
         var current = 0;

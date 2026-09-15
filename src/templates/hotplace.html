@@ -1,27 +1,26 @@
-    <div class="section">
-        <div id="section_1">
-            <div class="panel">
-                <div id="building_first">
-{% for img in h.images %}                    <div class="hotplace-photo">
-                        <img src="{{ base }}{{ img }}" alt="{{ h.title }}" loading="lazy">
-                    </div>
-{% endfor %}                </div>
-                <div id="building_second">
-                    <div id="building_info">
-                        <h1 id="building_info_title"><span>{{ h.title }}</span></h1>
-                        <div id="building_info_main">
-                            <div id="building_info_main_first">
-{% for line in h.body %}                                <span>{{ line }}</span>
-{% endfor %}                            </div>
-{% if h.extra_heading %}                            <div id="building_info_main_second">
-                                <span>{{ h.extra_heading }}</span><br><br>
-{% for line in h.extra_lines %}                                <span>{{ line }}</span>
-{% endfor %}                            </div>
-{% endif %}                        </div>
-                    </div>
-                </div>
-            </div>
+    <main class="page">
+        <div class="container container--narrow">
+            <header class="page-head">
+                <p class="page-eyebrow">핫플레이스</p>
+                <h1 class="page-title">{{ h.title }}</h1>
+            </header>
 
-{% include "_nav.html" %}
+            <div class="detail">
+                <div class="detail__gallery">
+{% for img in h.images %}                    <figure class="detail__photo">
+                        <img src="{{ base }}{{ img }}" alt="{{ h.title }}" loading="lazy">
+                    </figure>
+{% endfor %}                </div>
+
+                <div class="detail__body">
+                    <div class="card">
+{% for line in h.body %}                        <p class="body-text">{{ line }}</p>
+{% endfor %}                    </div>
+{% if h.extra_heading %}                    <div class="card callout">
+                        <h2 class="callout__title">{{ h.extra_heading }}</h2>
+{% for line in h.extra_lines %}                        <p class="body-text">{{ line }}</p>
+{% endfor %}                    </div>
+{% endif %}                </div>
+            </div>
         </div>
-    </div>
+    </main>

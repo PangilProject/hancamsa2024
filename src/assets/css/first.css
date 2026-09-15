@@ -1,10 +1,10 @@
 /* [ 인트로 애니메이션 ] */
 
 .page-first {
-    min-height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 lottie-player {

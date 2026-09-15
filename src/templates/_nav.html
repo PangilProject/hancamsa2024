@@ -1,14 +1,8 @@
-            <nav id="section_main_nav" aria-label="주 메뉴">
-                <div id="section_main_nav_home">
-                    <a href="{{ base }}index.html">
-                        <p>{{ site.title }}</p>
-                    </a>
-                </div>
-                <div id="section_main_nav_menu">
-{% for item in site.nav %}                    <div>
-                        <a href="{{ base }}{{ item.href }}">
-                            <p>{{ item.label }}</p>
-                        </a>
-                    </div>
-{% endfor %}                </div>
-            </nav>
+    <header class="nav">
+        <div class="nav__inner">
+            <a class="nav__logo" href="{{ base }}index.html">{{ site.title }}</a>
+            <nav class="nav__menu" aria-label="주 메뉴">
+{% for item in site.nav %}                <a href="{{ base }}{{ item.href }}">{{ item.label }}</a>
+{% endfor %}            </nav>
+        </div>
+    </header>

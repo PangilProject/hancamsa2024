@@ -1,0 +1,484 @@
+/* =========================================================
+   한캠사 디자인 시스템
+   - 색은 회색 계열 + 포인트 블루 하나로 제한한다
+   - 라운드는 8 / 12 / 16 / 20 네 단계만 쓴다
+   - 경계선 대신 배경색 차이와 아주 옅은 그림자로 면을 나눈다
+   ========================================================= */
+
+:root {
+    /* 포인트 */
+    --blue: #3182f6;
+    --blue-hover: #1b64da;
+    --blue-weak: #e8f3ff;
+
+    /* 글자 */
+    --text-strong: #191f28;
+    --text: #333d4b;
+    --text-sub: #6b7684;
+    --text-weak: #8b95a1;
+
+    /* 면 */
+    --bg: #f9fafb;
+    --surface: #ffffff;
+    --surface-sunken: #f2f4f6;
+    --line: #e5e8eb;
+
+    /* 라운드 */
+    --r-sm: 8px;
+    --r-md: 12px;
+    --r-lg: 16px;
+    --r-xl: 20px;
+
+    /* 그림자 */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, .04), 0 1px 3px rgba(0, 0, 0, .04);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, .06);
+
+    /* 여백 리듬 */
+    --gap: 16px;
+    --gap-lg: 24px;
+    --section-gap: 64px;
+
+    --nav-h: 64px;
+    --container: 1100px;
+}
+
+
+/* ---------------- 리셋 ---------------- */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--nav-h) + 16px);
+}
+
+body {
+    min-height: 100%;
+    overflow-x: hidden;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont,
+        'Apple SD Gothic Neo', 'Malgun Gothic', system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: -.01em;
+    word-break: keep-all;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+button {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+
+/* ---------------- 타이포 ---------------- */
+
+h1,
+h2,
+h3 {
+    color: var(--text-strong);
+    font-weight: 700;
+    letter-spacing: -.03em;
+    line-height: 1.35;
+}
+
+.body-text {
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.body-text + .body-text {
+    margin-top: 12px;
+}
+
+
+/* ---------------- 레이아웃 ---------------- */
+
+.container {
+    width: 100%;
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.container--narrow {
+    max-width: 880px;
+}
+
+.page {
+    padding: calc(var(--nav-h) + 48px) 0 96px;
+}
+
+.page-head {
+    margin-bottom: 40px;
+}
+
+.page-eyebrow {
+    color: var(--blue);
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.page-title {
+    font-size: 40px;
+}
+
+.page-title__mark {
+    color: var(--blue);
+}
+
+.page-desc {
+    margin-top: 12px;
+    color: var(--text-sub);
+    font-size: 17px;
+}
+
+.section + .section {
+    margin-top: var(--section-gap);
+}
+
+.section-title {
+    font-size: 24px;
+}
+
+.section-desc {
+    margin-top: 6px;
+    color: var(--text-sub);
+    font-size: 15px;
+}
+
+.section-title + .place-grid,
+.section-desc + .place-grid,
+.section-title + .people-grid,
+.section-desc + .people-grid,
+.section-title + .chip-grid,
+.section-desc + .chip-grid,
+.section-title + .card,
+.section-desc + .card {
+    margin-top: 20px;
+}
+
+
+/* ---------------- 카드 ---------------- */
+
+.card {
+    background-color: var(--surface);
+    border-radius: var(--r-xl);
+    box-shadow: var(--shadow-sm);
+    padding: 32px;
+}
+
+.card + .card {
+    margin-top: 20px;
+}
+
+.card .section-title + .body-text,
+.card .section-title + .timeline {
+    margin-top: 16px;
+}
+
+/* 텍스트 + 사진 2단 */
+
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: center;
+}
+
+.split__media img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: var(--r-lg);
+}
+
+.split--media-first .split__media {
+    order: -1;
+}
+
+.split__media--portrait {
+    text-align: center;
+}
+
+.split__media--portrait img {
+    aspect-ratio: 1 / 1;
+    max-width: 280px;
+    margin-inline: auto;
+}
+
+.split__media figcaption {
+    margin-top: 12px;
+    color: var(--text-sub);
+    font-size: 14px;
+}
+
+
+/* ---------------- 버튼 ---------------- */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
+    padding: 0 24px;
+    border-radius: var(--r-md);
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: -.02em;
+    transition: background-color .15s ease, color .15s ease;
+}
+
+.btn--primary {
+    background-color: var(--blue);
+    color: #fff;
+}
+
+.btn--primary:hover {
+    background-color: var(--blue-hover);
+}
+
+.btn--ghost {
+    background-color: #fff;
+    color: var(--text-strong);
+}
+
+.btn--ghost:hover {
+    background-color: var(--surface-sunken);
+}
+
+.btn--block {
+    width: 100%;
+}
+
+
+/* ---------------- 칩 ---------------- */
+
+.chip-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    height: 44px;
+    padding: 0 18px;
+    border-radius: var(--r-md);
+    background-color: var(--surface);
+    box-shadow: var(--shadow-sm);
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 600;
+    transition: background-color .15s ease, color .15s ease;
+}
+
+.chip:hover {
+    background-color: var(--blue-weak);
+    color: var(--blue);
+}
+
+
+/* ---------------- 구역 탭 ---------------- */
+
+.tabs {
+    position: sticky;
+    top: var(--nav-h);
+    z-index: 5;
+    display: flex;
+    gap: 6px;
+    margin-bottom: 32px;
+    padding: 6px;
+    border-radius: var(--r-md);
+    background-color: var(--surface-sunken);
+}
+
+.tabs a {
+    flex: 1 1 0;
+    padding: 10px 12px;
+    border-radius: var(--r-sm);
+    text-align: center;
+    color: var(--text-sub);
+    font-size: 15px;
+    font-weight: 600;
+    transition: background-color .15s ease, color .15s ease;
+}
+
+.tabs a:hover {
+    background-color: var(--surface);
+    color: var(--text-strong);
+}
+
+
+/* ---------------- 상단 네비게이션 ---------------- */
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    height: var(--nav-h);
+    background-color: rgba(255, 255, 255, .84);
+    backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 1px solid var(--line);
+    transition: background-color .2s ease, border-color .2s ease;
+}
+
+.nav__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.nav__logo {
+    color: var(--text-strong);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -.03em;
+}
+
+.nav__menu {
+    display: flex;
+    gap: 4px;
+}
+
+.nav__menu a {
+    padding: 8px 14px;
+    border-radius: var(--r-sm);
+    color: var(--text-sub);
+    font-size: 15px;
+    font-weight: 600;
+    transition: background-color .15s ease, color .15s ease;
+}
+
+.nav__menu a:hover {
+    background-color: var(--surface-sunken);
+    color: var(--text-strong);
+}
+
+/* 사진 히어로가 있는 페이지는 투명하게 시작했다가, 스크롤하면 흰 배경으로 바뀐다 */
+
+.page-home .nav,
+.page-building .nav {
+    background-color: transparent;
+    backdrop-filter: none;
+    border-bottom-color: transparent;
+}
+
+.page-home .nav__logo,
+.page-building .nav__logo {
+    color: #fff;
+}
+
+.page-home .nav__menu a,
+.page-building .nav__menu a {
+    color: rgba(255, 255, 255, .88);
+}
+
+.page-home .nav__menu a:hover,
+.page-building .nav__menu a:hover {
+    background-color: rgba(255, 255, 255, .16);
+    color: #fff;
+}
+
+.nav.is-solid {
+    background-color: rgba(255, 255, 255, .84);
+    backdrop-filter: saturate(180%) blur(12px);
+    border-bottom-color: var(--line);
+}
+
+.nav.is-solid .nav__logo {
+    color: var(--text-strong);
+}
+
+.nav.is-solid .nav__menu a {
+    color: var(--text-sub);
+}
+
+.nav.is-solid .nav__menu a:hover {
+    background-color: var(--surface-sunken);
+    color: var(--text-strong);
+}
+
+
+/* ---------------- 바닥글 ---------------- */
+
+.footer {
+    border-top: 1px solid var(--line);
+    background-color: var(--surface);
+}
+
+.footer__inner {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 40px 24px 56px;
+}
+
+.footer__brand {
+    color: var(--text-strong);
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -.03em;
+}
+
+.footer__desc {
+    margin-top: 4px;
+    color: var(--text-weak);
+    font-size: 14px;
+}
+
+.footer__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.footer__links a {
+    color: var(--text-sub);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.footer__links a:hover {
+    color: var(--blue);
+}

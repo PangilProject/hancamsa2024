@@ -1,76 +1,65 @@
-    <div class="section">
-{% include "_sidemenu.html" %}
-        <div id="section_1">
-{% include "_nav.html" %}
+    <main class="page">
+        <div class="container">
+            <header class="page-head">
+                <p class="page-eyebrow">{{ site.tagline }}</p>
+                <h1 class="page-title">
+{% for w in brand %}                    <span class="page-title__mark">{{ w.initial }}</span>{{ w.rest }}{% if not loop.last %}<br>{% endif %}
+{% endfor %}                </h1>
+            </header>
 
-            <div class="panel">
-                <div id="text1">
-                    <p class="typing-txt">{{ hint }}</p>
-                    <p class="typing" aria-hidden="true">:&nbsp;</p>
-                    <h1 id="text1_h3" tabindex="0">
-{% for w in brand %}                        <span>{{ w.initial }}</span>{{ w.rest }}{% if not loop.last %}<br>{% endif %}
-{% endfor %}                    </h1>
-                    <div id="section_1_main_logo">
+{% include "_tabs.html" %}
+
+            <section class="section" id="section_1">
+                <div class="card split split--media-first">
+                    <div class="split__media">
                         <img src="{{ base }}{{ logo }}" alt="한동대학교 캠퍼스 전경">
                     </div>
-                </div>
-                <div id="section_1_main_title">
-                    <div id="section_1_main_title_first">
-                        <section id="section_1_main_title_first_donggi">
-                            <h2><span>제작 동기</span></h2>
-                            <p>{{ motive }}</p>
-                        </section>
-                        <section id="section_1_main_title_first_goal">
-                            <h2><span>개발 목표</span></h2>
-                            <ul>
-{% for g in goals %}                                <li>{{ g }}</li>
-{% endfor %}                            </ul>
-                        </section>
+                    <div class="split__text">
+                        <h2 class="section-title">제작 동기</h2>
+                        <p class="body-text">{{ motive }}</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="section">
-        <div id="section_2">
-            <div class="panel">
-                <h2 id="section_2_main_title">한캠사 Developer</h2>
-                <div class="card-row">
-{% for d in developers %}                    <div class="card-photo">
-                        <img src="{{ base }}{{ d.photo }}" alt="{{ d.name }}" loading="lazy">
-                    </div>
-{% endfor %}                </div>
-                <div class="label-row">
-{% for d in developers %}                    <div class="card-label">
-                        <span>{{ d.name }}</span><br>
-                        - NickName : {{ d.nickname }}<br>
-                        : {{ d.intro }}
-                    </div>
-{% endfor %}                </div>
-            </div>
-        </div>
-    </div>
+                <div class="card">
+                    <h2 class="section-title">개발 목표</h2>
+                    <ol class="timeline">
+{% for g in goals %}                        <li>{{ g }}</li>
+{% endfor %}                    </ol>
+                </div>
+            </section>
 
-    <div class="section">
-        <div id="section_3">
-            <div class="panel">
-                <div id="section_3_main">
-                    <div id="section_3_main_title">
-                        <h2><span>{{ course.name }}</span></h2>
-                    </div>
-                    <div id="section_3_main_info">
-                        <div id="section_3_main_info_first">
-                            <img src="{{ base }}{{ course.professor_photo }}" alt="{{ course.professor }}" loading="lazy">
-                            [ {{ course.professor }} ]
+            <section class="section" id="section_2">
+                <h2 class="section-title">한캠사를 만든 사람들</h2>
+                <p class="section-desc">네 명이 함께 만들었어요.</p>
+                <div class="people-grid">
+{% for d in developers %}                    <article class="person">
+                        <div class="person__media">
+                            <img src="{{ base }}{{ d.photo }}" alt="{{ d.name }}" loading="lazy">
                         </div>
-                        <div id="section_3_main_info_second">
-{% for g in course.groups %}                            <b><span>{{ g.heading }}</span></b><br>
-{% for line in g.lines %}                            <span>{{ line }}</span><br>
-{% endfor %}                            <br>
-{% endfor %}                        </div>
+                        <div class="person__body">
+                            <h3 class="person__name">{{ d.name }}</h3>
+                            <p class="person__nick">{{ d.nickname }}</p>
+                            <p class="person__intro">{{ d.intro }}</p>
+                        </div>
+                    </article>
+{% endfor %}                </div>
+            </section>
+
+            <section class="section" id="section_3">
+                <h2 class="section-title">{{ course.name }}</h2>
+                <p class="section-desc">이 사이트를 만든 수업이에요.</p>
+                <div class="card split split--media-first">
+                    <div class="split__media split__media--portrait">
+                        <img src="{{ base }}{{ course.professor_photo }}" alt="{{ course.professor }}" loading="lazy">
+                        <figcaption>{{ course.professor }}</figcaption>
                     </div>
+                    <div class="split__text">
+{% for g in course.groups %}                        <div class="def">
+                            <h3 class="def__title">{{ g.heading }}</h3>
+{% for line in g.lines %}                            <p class="body-text">{{ line }}</p>
+{% endfor %}                        </div>
+{% endfor %}                    </div>
                 </div>
-            </div>
+            </section>
         </div>
-    </div>
+    </main>

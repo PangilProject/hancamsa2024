@@ -1,71 +1,95 @@
-body.page-map {
-    background-color: #7DCADD;
+/* =========================================================
+   [ 캠퍼스맵 ]
+   배경 지도는 아이소메트릭으로 투영해 두었고(src/tools/restyle_map.py),
+   그 위에 건물을 윗면 + 옆면으로 세워 실제 부피처럼 보이게 한다.
+   좌표 계산은 src/mapproj.py 한 곳에 모여 있다.
+   ========================================================= */
+
+.map {
+    margin-bottom: var(--section-gap);
 }
 
-#section_1,
-#section_2,
-#section_3 {
-    width: 100%;
-    min-height: var(--section-h);
-    background-color: #7DCADD;
-    position: static;
-}
-
-.panel {
-    width: 100%;
-}
-
-#section_main_imageMap {
-    width: 80%;
-    max-width: 1100px;
-    margin: 0 auto;
+.map__stage {
     position: relative;
-    top: 100px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: #DCEBF1;
-    border-radius: 30px;
+    padding: 8px;
+    border-radius: var(--r-xl);
+    background: linear-gradient(180deg, #f7f9fc 0%, #eef2f7 100%);
+    box-shadow: var(--shadow-md);
 }
 
-#section_main_imageMap .typing-txt,
-#section_main_imageMap .typing {
-    padding: 0 5%;
-}
-
-/* usemap 좌표는 픽셀 고정이라 js/responsive.js 가 실제 렌더 크기에 맞춰 다시 계산한다 */
-
-#imageMap {
-    display: block;
-    margin: 0 auto 2%;
-    width: 90%;
+.map__base {
+    width: 100%;
     height: auto;
-    /* 원래 1036.8 x 520 으로 늘려 그리던 비율. usemap 좌표 기준이라 그대로 유지한다 */
-    aspect-ratio: 1036.8 / 520;
-    object-fit: fill;
-    border-radius: 30px;
+    /* 기울어진 지면에 그림자를 깔아 바닥에서 떠 보이게 한다 */
+    filter: drop-shadow(0 14px 18px rgba(25, 31, 40, .14));
 }
 
-
-/* [ 모바일용 건물 목록 ] 좁은 화면에서는 이미지맵 대신 버튼 목록을 보여준다 */
-
-#buildingList {
-    display: none;
-    width: 90%;
-    margin: 0 auto 4%;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+.map__layer {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+    font-family: inherit;
+    overflow: visible;
 }
 
-#buildingList a {
-    display: block;
-    padding: 14px 8px;
-    background-color: #1B8BB8;
-    color: white;
-    text-align: center;
-    font-size: 16px;
-    border-radius: 12px;
+/* ---- 건물 블록 ---- */
+
+.map__spot {
+    cursor: pointer;
 }
 
-#buildingList a:active {
-    background-color: #7DCADD;
+/* 옆면: 아래로 갈수록 어두워져 두께가 보이게 한다 */
+
+.map__wall {
+    fill: #7ea8e8;
+    transition: fill .2s ease;
+}
+
+.map__top {
+    fill: #dce9fb;
+    stroke: #3182f6;
+    stroke-width: 2;
+    stroke-linejoin: round;
+    transition: fill .2s ease, stroke .2s ease;
+}
+
+.map__spot:hover .map__wall,
+.map__spot:focus-visible .map__wall {
+    fill: #1b64da;
+}
+
+.map__spot:hover .map__top,
+.map__spot:focus-visible .map__top {
+    fill: #3182f6;
+    stroke: #fff;
+}
+
+.map__spot:focus-visible {
+    outline: none;
+}
+
+/* ---- 이름표 ---- */
+
+.map__label {
+    fill: var(--text-strong);
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: -.03em;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    /* 지도 위에서도 읽히도록 글자 뒤에 흰 테두리를 깐다 */
+    stroke: #fff;
+    stroke-width: 6px;
+    paint-order: stroke fill;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .map__wall,
+    .map__top {
+        transition: none;
+    }
 }

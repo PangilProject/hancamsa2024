@@ -1,7 +1,7 @@
 /* =========================================================
    반응형 브레이크포인트 모음
    - 항상 다른 css 뒤에 링크할 것
-   - 1024px : 태블릿 가로 / 768px : 태블릿 세로·큰 폰 / 480px : 폰
+   - 1024px 태블릿 가로 / 768px 태블릿 세로·큰 폰 / 480px 폰
    ========================================================= */
 
 
@@ -9,28 +9,31 @@
 
 @media (max-width: 1024px) {
     :root {
-        --section-h: 700px;
+        --section-gap: 56px;
     }
 
-    .panel {
-        width: 90%;
+    .hero__title {
+        font-size: 44px;
     }
 
-    #section_main_nav {
-        top: 20px;
+    .page-title {
+        font-size: 34px;
     }
 
-    #section_main_sideMenubar {
-        width: 84px;
-        top: 220px;
+    .detail-hero__title {
+        font-size: 36px;
     }
 
-    #section_main_sideMenubar a {
-        font-size: 95%;
+    .place-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    #section_main_imageMap {
-        width: 90%;
+    .people-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+        padding: 28px;
     }
 }
 
@@ -39,237 +42,126 @@
 
 @media (max-width: 768px) {
     :root {
-        --section-h: auto;
+        --nav-h: 56px;
+        --section-gap: 44px;
     }
 
-    .section {
-        min-height: auto;
+    .container {
+        padding: 0 20px;
     }
 
-    .page-popup .section {
-        min-height: 100vh;
-        padding: 30px 24px 0;
+    .page {
+        padding: calc(var(--nav-h) + 32px) 0 64px;
+    }
+
+    .page-head {
+        margin-bottom: 28px;
+    }
+
+    .hero__title {
+        font-size: 34px;
+    }
+
+    .hero__actions {
+        margin-top: 28px;
+    }
+
+    .hero__actions .btn {
+        flex: 1 1 140px;
+    }
+
+    .page-title {
+        font-size: 28px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .detail-hero {
+        height: 40vh;
+        min-height: 260px;
+    }
+
+    .detail-hero__content {
+        padding-bottom: 28px;
+    }
+
+    .detail-hero__title {
+        font-size: 28px;
+    }
+
+    .card {
+        padding: 22px;
+        border-radius: var(--r-lg);
+    }
+
+    /* 2단 배치는 모두 세로로 쌓는다 */
+    .split,
+    .detail {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .split--media-first .split__media {
+        order: 0;
+    }
+
+    .split__media--portrait img {
+        max-width: 220px;
+        margin: 0 auto;
+    }
+
+    .place-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .people-grid {
+        gap: 12px;
+    }
+
+    .person__body {
+        padding: 16px;
+    }
+
+    .person__intro {
+        font-size: 13px;
     }
 
     /*
-    top:100px 으로 밀어내던 것을 실제 높이에 반영되게 바꾼다.
-    상단 여백은 부모의 padding 으로 준다 - 자식 margin 은 병합되어 밖으로 빠져나가
-    absolute 인 nav 와 겹치기 때문.
+    좁은 화면에서는 건물 블록도 이름표도 손가락·눈에 너무 작다.
+    지도는 캠퍼스 전경을 보여주는 역할만 하고, 이동은 아래 칩 목록으로 한다.
     */
-    #section_1,
-    #section_2,
-    #section_3 {
-        padding-top: 80px;
-        padding-bottom: 30px;
-    }
-
-    .panel,
-    #section_main_imageMap {
-        width: 92%;
-        height: auto;
-        min-height: 0;
-        top: 0;
-        margin: 0 auto;
-        padding-bottom: 24px;
-    }
-
-    .page-map .panel {
-        width: 100%;
-        margin: 0;
-        padding-bottom: 0;
-    }
-
-    .page-map .typing,
-    .page-map .typing-txt {
-        font-size: 18px !important;
-    }
-
-    #section_main_nav {
-        top: 16px;
-    }
-
-    /* --- 메인(index) --- */
-    .page-home #section_1,
-    .page-home #section_2,
-    .page-home #section_3 {
-        padding: 0;
-    }
-
-    /* --- 캠퍼스맵 : 이미지맵 대신 건물 목록 --- */
-    .page-map #imageMap {
+    .map__labels {
         display: none;
     }
 
-    .page-map #buildingList {
-        display: grid;
+    .map {
+        margin-bottom: 36px;
     }
 
-    /* --- 소개 페이지 --- */
-    /* 터치 기기에는 hover 가 없어 영영 못 보게 되므로 처음부터 드러낸다 */
-    #text1 #text1_h3 {
-        font-size: 30px;
-        color: #1B8BB8;
+    .map__stage {
+        padding: 4px;
     }
 
-    .page-introduce .typing-txt,
-    .page-introduce .typing {
-        display: none !important;
-    }
-
-    #text1 {
-        float: none;
-        width: 100%;
-    }
-
-    #section_1_main_title {
-        float: none;
-        width: 100%;
-        height: auto;
-        min-height: 0;
-        overflow: visible;
-        border-radius: 0px 0px 30px 30px;
-    }
-
-    #section_1_main_logo {
-        width: 100%;
-        height: 220px;
-    }
-
-    #section_2_main_title {
-        height: auto;
-        padding: 16px 5% 0;
-    }
-
-    .card-row,
-    .label-row {
-        height: auto;
-        flex-wrap: wrap;
-        gap: 12px;
-        padding: 12px 5%;
-    }
-
-    .card-photo,
-    .card-label {
-        flex: 1 1 calc(50% - 12px);
-        height: auto;
-        min-height: 150px;
-        top: 0;
-        margin: 0;
-        overflow: visible;
-    }
-
-    .card-label {
-        min-height: 0;
-        padding: 12px 16px;
-    }
-
-    #section_3_main_info {
-        height: auto;
-        overflow: visible;
-        flex-direction: column;
-    }
-
-    #section_3_main_info_first {
-        flex: 0 0 auto;
-        width: 60%;
-        max-width: 240px;
-        margin: 0 auto;
-    }
-
-    /* --- 건물 페이지 --- */
-    #section_1_main_BG_Image {
-        height: 60vh;
-        min-height: 320px;
-    }
-
-    .card-row > a,
-    .label-row > a {
-        flex: 1 1 calc(50% - 12px);
-    }
-
-    .card-row > a > .card-photo,
-    .label-row > a > .card-label {
-        width: 100%;
-        min-height: 0;
-    }
-
-    .card-row > a > .card-photo {
-        height: 150px;
-    }
-
-    #section_3_main_title {
-        height: auto;
-        padding: 16px 5% 0;
-    }
-
-    #section_3_main_title_str {
-        line-height: 1.4;
-    }
-
-    #section_3_main_info,
-    #section_3_main_image {
-        float: none;
-        width: 100%;
-        height: auto;
-        min-height: 0;
-        overflow: visible;
-        padding: 5%;
-    }
-
-    #section_3_main_image img {
-        height: auto;
-    }
-
-    /* --- 핫플레이스 상세 --- */
-    .panel.hotplace,
-    .page-info .panel {
-        flex-direction: column;
-        gap: 20px;
-        padding: 24px;
-    }
-
-    .page-info #building_first {
-        flex: 0 0 auto;
-    }
-
-    .page-info .hotplace-photo {
-        height: 220px;
-    }
-
-    .page-info #building_info {
-        height: auto;
-        overflow: visible;
-    }
-
-    /* --- 사이드 메뉴 : 하단 고정 바 --- */
-    body.page-introduce,
-    body.page-building {
-        padding-bottom: 52px;
-    }
-
-    #section_main_sideMenubar {
-        top: auto;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        border-radius: 0;
-    }
-
-    #section_main_sideMenubar ul {
-        display: flex;
-        width: 100%;
-    }
-
-    #section_main_sideMenubar li {
-        flex: 1 1 0;
-        border-radius: 0;
-    }
-
-    #section_main_sideMenubar a {
+    .chip {
         height: 48px;
-        line-height: 48px;
-        font-size: 15px;
+        flex: 1 1 calc(50% - 10px);
+        justify-content: center;
+    }
+
+    .tabs {
+        margin-bottom: 24px;
+    }
+
+    .tabs a {
+        font-size: 14px;
+        padding: 10px 8px;
+    }
+
+    .footer__inner {
+        padding: 32px 20px 44px;
     }
 }
 
@@ -277,50 +169,51 @@
 /* ---------------- 폰 (~480px) ---------------- */
 
 @media (max-width: 480px) {
-    .panel,
-    #section_main_imageMap {
-        width: 94%;
+    .container {
+        padding: 0 16px;
     }
 
-    #section_main_nav {
-        width: 94%;
-        left: 3%;
+    .hero__content {
+        padding: 0 16px;
     }
 
-    #section_main_nav_menu p {
-        padding: 0 8px;
+    .hero__title {
+        font-size: 28px;
     }
 
-    #buildingList {
+    .hero__actions {
+        flex-direction: column;
+    }
+
+    /* 세로로 쌓을 때는 flex-basis 가 높이로 먹히므로 버튼 높이를 고정한다 */
+    .hero__actions .btn {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .page-title {
+        font-size: 26px;
+    }
+
+    .people-grid {
         grid-template-columns: 1fr;
     }
 
-    /* 사진 카드는 2열 유지, 글자 카드만 1열 */
-    .card-label,
-    .label-row > a {
-        flex: 1 1 100%;
+    .person {
+        flex-direction: row;
     }
 
-    .card-photo,
-    .card-row > a > .card-photo {
-        height: 130px;
-        min-height: 0;
+    .person__media {
+        flex: 0 0 120px;
+        aspect-ratio: auto;
     }
 
-    #section_1_main_logo {
-        height: 180px;
+    .card {
+        padding: 20px;
     }
 
-    .page-info .panel {
-        padding: 16px;
-    }
-
-    .page-info .hotplace-photo {
-        height: 180px;
-    }
-
-    #section_1_main_BG_Image {
-        height: 45vh;
-        min-height: 260px;
+    .detail__photo img,
+    .split__media img {
+        border-radius: var(--r-md);
     }
 }

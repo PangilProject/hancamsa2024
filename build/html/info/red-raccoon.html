@@ -6,67 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>빨간너구리 · 한캠사</title>
     <meta name="description" content="[ 여기는 어떤 장소인가요? ]">
+    <meta name="theme-color" content="#ffffff">
     <link rel="icon" href="../../image/HGU_logo.webp">
-    <link href="../../css/all.css" rel="stylesheet">
-    <link href="../../css/font/font.css" rel="stylesheet">
-    <link href="../../css/Building.css" rel="stylesheet">
-    <link href="../../css/nav.css" rel="stylesheet">
-    <link href="../../css/HotPlace.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+
+    <link href="../../css/base.css" rel="stylesheet">
+    <link href="../../css/hotplace.css" rel="stylesheet">
 
     <!-- 반응형 (항상 마지막) -->
     <link href="../../css/responsive.css" rel="stylesheet">
 </head>
 
 <body class="page-info">
-    <div class="section">
-        <div id="section_1">
-            <div class="panel">
-                <div id="building_first">
-                    <div class="hotplace-photo">
+    <header class="nav">
+        <div class="nav__inner">
+            <a class="nav__logo" href="../../index.html">한캠사</a>
+            <nav class="nav__menu" aria-label="주 메뉴">
+                <a href="../../introduce.html">소개</a>
+                <a href="../../campusMap.html">캠퍼스맵</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page">
+        <div class="container container--narrow">
+            <header class="page-head">
+                <p class="page-eyebrow">핫플레이스</p>
+                <h1 class="page-title">빨간너구리</h1>
+            </header>
+
+            <div class="detail">
+                <div class="detail__gallery">
+                    <figure class="detail__photo">
                         <img src="../../image/update.webp" alt="빨간너구리" loading="lazy">
-                    </div>
-                    <div class="hotplace-photo">
+                    </figure>
+                    <figure class="detail__photo">
                         <img src="../../image/update.webp" alt="빨간너구리" loading="lazy">
-                    </div>
+                    </figure>
                 </div>
-                <div id="building_second">
-                    <div id="building_info">
-                        <h1 id="building_info_title"><span>빨간너구리</span></h1>
-                        <div id="building_info_main">
-                            <div id="building_info_main_first">
-                                <span>[ 여기는 어떤 장소인가요? ]</span>
-                            </div>
-                            <div id="building_info_main_second">
-                                <span>[ 이외의 정보도 있나요? ]</span><br><br>
-                                <span>없습니다!</span>
-                            </div>
-                        </div>
+
+                <div class="detail__body">
+                    <div class="card">
+                        <p class="body-text">[ 여기는 어떤 장소인가요? ]</p>
+                    </div>
+                    <div class="card callout">
+                        <h2 class="callout__title">[ 이외의 정보도 있나요? ]</h2>
+                        <p class="body-text">없습니다!</p>
                     </div>
                 </div>
             </div>
-
-            <nav id="section_main_nav" aria-label="주 메뉴">
-                <div id="section_main_nav_home">
-                    <a href="../../index.html">
-                        <p>한캠사</p>
-                    </a>
-                </div>
-                <div id="section_main_nav_menu">
-                    <div>
-                        <a href="../../introduce.html">
-                            <p>소개</p>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="../../campusMap.html">
-                            <p>캠퍼스맵</p>
-                        </a>
-                    </div>
-                </div>
-            </nav>
-
         </div>
-    </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner">
+            <p class="footer__brand">한캠사</p>
+            <p class="footer__desc">한동대학교 캠퍼스 소개 사이트</p>
+            <nav class="footer__links" aria-label="바닥글 메뉴">
+                <a href="../../index.html">홈</a>
+                <a href="../../introduce.html">소개</a>
+                <a href="../../campusMap.html">캠퍼스맵</a>
+            </nav>
+        </div>
+    </footer>
 
 </body>
 

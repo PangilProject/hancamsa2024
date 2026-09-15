@@ -1,80 +1,41 @@
-/* [ 핫플레이스 상세 ] 사진 영역 + 설명 영역을 flex 로 나란히, 좁아지면 세로로 쌓인다 */
+/* [ 핫플레이스 상세 ] 사진 열 + 설명 열 */
 
-.panel {
-    padding: 35px;
-    border-radius: 30px;
-    display: flex;
-    align-items: stretch;
-    gap: 43px;
+.detail {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    gap: 24px;
+    align-items: start;
 }
 
-#building_first {
-    flex: 0 0 38%;
-    min-width: 0;
+.detail__gallery {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    border-radius: 30px;
+    gap: 16px;
 }
 
-/* 마크업의 <br> 이 flex 아이템이 되어 빈 줄을 만들지 않도록 */
-
-#building_first br {
-    display: none;
-}
-
-.hotplace-photo {
+.detail__photo img {
     width: 100%;
-    flex: 1 1 0;
-    min-height: 200px;
-    background-color: rgb(204, 204, 204);
-    border-radius: 30px;
-}
-
-.hotplace-photo img {
-    width: 100%;
-    height: 100%;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
-    border-radius: 30px;
+    border-radius: var(--r-xl);
+    background-color: var(--surface-sunken);
 }
 
-#building_second {
-    flex: 1 1 auto;
-    min-width: 0;
-    background-color: #1B8BB8;
-    border-radius: 30px;
+.detail__body .card {
+    padding: 28px;
 }
 
-#building_info {
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    padding: 5%;
-    /* background-color: mediumorchid; */
+.callout {
+    background-color: var(--blue-weak);
+    box-shadow: none;
 }
 
-#building_info_title {
-    width: 100%;
-    /* background-color: limegreen; */
-    font-size: clamp(28px, 4vw, 50px);
-    text-align: center;
-    margin-bottom: 6%;
+.callout__title {
+    margin-bottom: 8px;
+    color: var(--blue-hover);
+    font-size: 16px;
 }
 
-#building_info_main {
-    width: 100%;
-    /* background-color: mediumturquoise; */
-}
-
-#building_info_main_first {
-    width: 100%;
-    /* background-color: navajowhite; */
-    line-height: 1.8;
-    margin-bottom: 6%;
-}
-
-#building_info_main_second {
-    width: 100%;
-    /* background-color: palegreen; */
-    line-height: 1.8;
+.callout .body-text {
+    color: var(--text);
 }

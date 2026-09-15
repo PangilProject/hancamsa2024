@@ -1,23 +1,36 @@
-    <div class="section">
-        <div id="section_1">
-{% include "_nav.html" %}
+    <main class="page">
+        <div class="container">
+            <header class="page-head">
+                <h1 class="page-title">캠퍼스맵</h1>
+                <p class="page-desc">{{ prompt }}</p>
+            </header>
 
-            <div class="panel">
-                <div id="section_main_imageMap">
-                    <p class="typing-txt">{{ prompt }}</p>
-                    <p class="typing" aria-hidden="true">&nbsp;&nbsp;:&nbsp;</p>
+            <div class="map" id="map">
+                <div class="map__stage">
+                    <img class="map__base" src="{{ base }}{{ image.src }}"
+                        width="{{ view.w }}" height="{{ view.h }}" alt="한동대학교 캠퍼스 지도">
 
-                    <img src="{{ base }}image/mainMap.webp" id="imageMap" usemap="#imgMap"
-                        alt="한동대학교 캠퍼스 지도" data-map-basew="1036.8" data-map-baseh="520">
-                    <map name="imgMap">
-{% for a in areas %}                        <area shape="{{ a.shape }}" coords="{{ a.coords }}" href="html/{{ a.target }}.html" alt="{{ a.name }}" title="{{ a.name }}">
-{% endfor %}                    </map>
-
-                    <!-- 좁은 화면에서는 이미지맵 대신 이 목록이 보인다 -->
-                    <nav id="buildingList" aria-label="건물 목록">
-{% for a in areas %}                        <a href="html/{{ a.target }}.html">{{ a.name }}</a>
-{% endfor %}                    </nav>
+                    <svg class="map__layer" viewBox="0 0 {{ view.w }} {{ view.h }}"
+                        role="group" aria-label="건물 바로가기">
+{% for s in shapes %}                        <a class="map__spot" href="html/{{ s.target }}.html" aria-label="{{ s.name }}">
+{% for w in s.walls %}                            <polygon class="map__wall" points="{{ w }}"></polygon>
+{% endfor %}                            <polygon class="map__top" points="{{ s.top }}"></polygon>
+                        </a>
+{% endfor %}
+                        <!-- 이름표는 어떤 건물에도 가리지 않도록 맨 위에 따로 그린다 -->
+                        <g class="map__labels" aria-hidden="true">
+{% for s in shapes %}                            <text class="map__label" x="{{ s.cx }}" y="{{ s.cy }}">{{ s.name }}</text>
+{% endfor %}                        </g>
+                    </svg>
                 </div>
             </div>
+
+            <section class="section">
+                <h2 class="section-title">건물 바로가기</h2>
+                <p class="section-desc">지도에서 바로 누르거나, 아래 목록에서 골라보세요.</p>
+                <nav class="chip-grid" id="buildingList" aria-label="건물 목록">
+{% for s in shapes %}                    <a class="chip" href="html/{{ s.target }}.html">{{ s.name }}</a>
+{% endfor %}                </nav>
+            </section>
         </div>
-    </div>
+    </main>

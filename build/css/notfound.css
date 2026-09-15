@@ -1,37 +1,37 @@
 /* [ 404 ] */
 
-.page-404 {
+.notfound {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-#centerDiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 16px;
-    width: 100%;
-    max-width: 500px;
-    min-height: 350px;
     padding: 24px;
+}
+
+.notfound__card {
+    width: 100%;
+    max-width: 420px;
+    padding: 40px 28px;
+    border-radius: var(--r-xl);
+    background-color: var(--surface);
+    box-shadow: var(--shadow-sm);
     text-align: center;
-    background-color: #888;
-    border-radius: 35px;
 }
 
-#centerDiv h1,
-#centerDiv a {
-    color: white;
+.notfound__code {
+    color: var(--blue);
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -.04em;
 }
 
-#centerDiv h1 {
-    font-size: clamp(22px, 5vw, 32px);
+.notfound__title {
+    margin-top: 8px;
+    font-size: 24px;
 }
 
-#centerDiv a:hover {
-    color: orange;
+.notfound__desc {
+    margin: 12px 0 28px;
+    color: var(--text-sub);
+    font-size: 15px;
 }
